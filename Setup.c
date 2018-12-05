@@ -1,6 +1,7 @@
+#include <msp430g2553.h>
 #include "Setup.h"
 
-void UARTSetup()								// Code from Lab 0 example code
+/*void UARTSetup()								// Code from Lab 0 example code
 {
     DCOCTL = 0;                            		// Select lowest DCOx and MODx settings
     BCSCTL1 = CALBC1_1MHZ;                   	// Set DCO
@@ -14,7 +15,7 @@ void UARTSetup()								// Code from Lab 0 example code
     UCA0CTL1 &= ~UCSWRST;                     	// **Initialize USCI state machine**
     IE2 |= UCA0RXIE;                          	// Enable USCI_A0 RX interrupt
 }
-
+*/
 void TimerSetup()                       		// Subject to change
 {
     //CCTL0 = CCIE;
@@ -32,7 +33,7 @@ void TimerSetup()                       		// Subject to change
 }
 
 void BoardSetup(){
-	//From exmple
+	//From example
 	P1DIR |= BIT0;                         	   // Set P1.0 to output direction
 	P1IE |=  BIT3;                         	   // P1.3 interrupt enabled
 	P1IES |= BIT3;                         	   // P1.3 Hi/lo edge
