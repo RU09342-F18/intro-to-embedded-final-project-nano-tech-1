@@ -12,5 +12,7 @@ void UARTSetup();
 
 void TimerSetup(); 
 
+void BoardSetup();
+
 
 #endif /* Setup_H_ */
