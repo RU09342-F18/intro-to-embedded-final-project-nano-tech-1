@@ -1,4 +1,3 @@
-#include <msp430g2553.h>
 #include "Setup.h"
 #include <msp430.h>
 
