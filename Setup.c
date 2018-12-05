@@ -1,7 +1,7 @@
 #include "Setup.h"
 #include <msp430.h>
 
-/*void UARTSetup()								// Code from Lab 0 example code
+void UARTSetup()								// Code from Lab 0 example code
 {
     DCOCTL = 0;                            		// Select lowest DCOx and MODx settings
     BCSCTL1 = CALBC1_1MHZ;                   	// Set DCO
@@ -15,7 +15,7 @@
     UCA0CTL1 &= ~UCSWRST;                     	// **Initialize USCI state machine**
     IE2 |= UCA0RXIE;                          	// Enable USCI_A0 RX interrupt
 }
-*/
+
 void TimerSetup()                       		// Subject to change
 {
     //CCTL0 = CCIE;
