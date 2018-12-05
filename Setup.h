@@ -8,9 +8,9 @@
 #ifndef Setup_H_
 #define Setup_H_
 
+void UARTSetup();
 
-
-
+void TimerSetup(); 
 
 
 #endif /* Setup_H_ */
