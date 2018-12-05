@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://nurdspace.nl/ESP8266 -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./ESP8266 - NURDspace_files/load.php5"></script><script async="" src="./ESP8266 - NURDspace_files/load(1).php5"></script><script async="" src="./ESP8266 - NURDspace_files/load(2).php5"></script>
+
+<title>ESP8266 - NURDspace</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23.2">
+<link rel="ExportRDF" type="application/rdf+xml" title="ESP8266" href="https://nurdspace.nl/index.php5?title=Special:ExportRDF/ESP8266&amp;xmlmime=rdf">
+<link rel="shortcut icon" href="https://nurdspace.nl/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://nurdspace.nl/opensearch_desc.php5" title="NURDspace (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://nurdspace.nl/api.php5?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NURDspace Atom feed" href="https://nurdspace.nl/index.php5?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="./ESP8266 - NURDspace_files/load(3).php5">
+<link rel="stylesheet" href="./ESP8266 - NURDspace_files/gumax_main.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?303" media="screen" /><![endif]-->
+<link rel="stylesheet" href="./ESP8266 - NURDspace_files/gumax_print.css" media="print"><style>
+.qtip{position:absolute;left:-28000px;top:-28000px;display:none;max-width:280px;min-width:50px;font-size:10.5px;line-height:12px;direction:ltr;box-shadow:none;padding:0}.qtip-content{position:relative;padding:5px 9px;overflow:hidden;text-align:left;word-wrap:break-word}.qtip-titlebar{position:relative;padding:5px 35px 5px 10px;overflow:hidden;border-width:0 0 1px;font-weight:bold}.qtip-titlebar + .qtip-content{border-top-width:0 !important} .qtip-close{position:absolute;right:-9px;top:-9px;z-index:11; cursor:pointer;outline:medium none;border:1px solid transparent}.qtip-titlebar .qtip-close{right:4px;top:50%;margin-top:-9px}* html .qtip-titlebar .qtip-close{top:16px} .qtip-titlebar .ui-icon,.qtip-icon .ui-icon{display:block;text-indent:-1000em;direction:ltr}.qtip-icon,.qtip-icon .ui-icon{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;text-decoration:none}.qtip-icon .ui-icon{width:18px;height:14px;line-height:14px;text-align:center;text-indent:0;font:normal bold 10px/13px Tahoma,sans-serif;color:inherit;background:transparent none no-repeat -100em -100em} .qtip-focus{} .qtip-hover{} .qtip-default{border:1px solid #F1D031;background-color:#FFFFA3;color:#555}.qtip-default .qtip-titlebar{background-color:#FFEF93}.qtip-default .qtip-icon{border-color:#CCC;background:#F1F1F1;color:#777}.qtip-default .qtip-titlebar .qtip-close{border-color:#AAA;color:#111}.qtip-shadow{-webkit-box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15);-moz-box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15);box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15)} .qtip-rounded,.qtip-tipsy,.qtip-bootstrap{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.qtip-rounded .qtip-titlebar{-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0} .qtip-youtube{-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-webkit-box-shadow:0 0 3px #333;-moz-box-shadow:0 0 3px #333;box-shadow:0 0 3px #333;color:white;border:0 solid transparent;background:#4A4A4A;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#4A4A4A),color-stop(100%,black));background-image:-webkit-linear-gradient(top,#4A4A4A 0,black 100%);background-image:-moz-linear-gradient(top,#4A4A4A 0,black 100%);background-image:-ms-linear-gradient(top,#4A4A4A 0,black 100%);background-image:-o-linear-gradient(top,#4A4A4A 0,black 100%)}.qtip-youtube .qtip-titlebar{background-color:#4A4A4A;background-color:rgba(0,0,0,0)}.qtip-youtube .qtip-content{padding:.75em;font:12px arial,sans-serif;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);-ms-filter:"progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);"}.qtip-youtube .qtip-icon{border-color:#222}.qtip-youtube .qtip-titlebar .ui-state-hover{border-color:#303030} .qtip-jtools{background:#232323;background:rgba(0,0,0,0.7);background-image:-webkit-gradient(linear,left top,left bottom,from(#717171),to(#232323));background-image:-moz-linear-gradient(top,#717171,#232323);background-image:-webkit-linear-gradient(top,#717171,#232323);background-image:-ms-linear-gradient(top,#717171,#232323);background-image:-o-linear-gradient(top,#717171,#232323);border:2px solid #ddd;border:2px solid rgba(241,241,241,1);-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-webkit-box-shadow:0 0 12px #333;-moz-box-shadow:0 0 12px #333;box-shadow:0 0 12px #333} .qtip-jtools .qtip-titlebar{background-color:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A)"}.qtip-jtools .qtip-content{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323)"}.qtip-jtools .qtip-titlebar,.qtip-jtools .qtip-content{background:transparent;color:white;border:0 dashed transparent}.qtip-jtools .qtip-icon{border-color:#555}.qtip-jtools .qtip-titlebar .ui-state-hover{border-color:#333} .qtip-cluetip{-webkit-box-shadow:4px 4px 5px rgba(0,0,0,0.4);-moz-box-shadow:4px 4px 5px rgba(0,0,0,0.4);box-shadow:4px 4px 5px rgba(0,0,0,0.4);background-color:#D9D9C2;color:#111;border:0 dashed transparent}.qtip-cluetip .qtip-titlebar{background-color:#87876A;color:white;border:0 dashed transparent}.qtip-cluetip .qtip-icon{border-color:#808064}.qtip-cluetip .qtip-titlebar .ui-state-hover{border-color:#696952;color:#696952} .qtip-tipsy{background:black;background:rgba(0,0,0,.87);color:white;border:0 solid transparent;font-size:11px;font-family:'Lucida Grande',sans-serif;font-weight:bold;line-height:16px;text-shadow:0 1px black}.qtip-tipsy .qtip-titlebar{padding:6px 35px 0 10px;background-color:transparent}.qtip-tipsy .qtip-content{padding:6px 10px}.qtip-tipsy .qtip-icon{border-color:#222;text-shadow:none}.qtip-tipsy .qtip-titlebar .ui-state-hover{border-color:#303030} .qtip-tipped{border:3px solid #959FA9;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background-color:#F9F9F9;color:#454545;font-weight:normal;font-family:serif}.qtip-tipped .qtip-titlebar{border-bottom-width:0;color:white;background:#3A79B8;background-image:-webkit-gradient(linear,left top,left bottom,from(#3A79B8),to(#2E629D));background-image:-webkit-linear-gradient(top,#3A79B8,#2E629D);background-image:-moz-linear-gradient(top,#3A79B8,#2E629D);background-image:-ms-linear-gradient(top,#3A79B8,#2E629D);background-image:-o-linear-gradient(top,#3A79B8,#2E629D);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D)"}.qtip-tipped .qtip-icon{border:2px solid #285589;background:#285589}.qtip-tipped .qtip-icon .ui-icon{background-color:#FBFBFB;color:#555} .qtip-bootstrap{ font-size:14px;line-height:20px;color:#333333; padding:1px;background-color:#ffffff;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.2);-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);box-shadow:0 5px 10px rgba(0,0,0,0.2);-webkit-background-clip:padding-box;-moz-background-clip:padding;background-clip:padding-box}.qtip-bootstrap .qtip-titlebar{ padding:8px 14px;margin:0;font-size:14px;font-weight:normal;line-height:18px;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}.qtip-bootstrap .qtip-titlebar .qtip-close{ right:11px;top:45%;border-style:none}.qtip-bootstrap .qtip-content{ padding:9px 14px}.qtip-bootstrap .qtip-icon{ background:transparent}.qtip-bootstrap .qtip-icon .ui-icon{ width:auto;height:auto; float:right;font-size:20px;font-weight:bold;line-height:18px;color:#000000;text-shadow:0 1px 0 #ffffff;opacity:0.2;filter:alpha(opacity=20)}.qtip-bootstrap .qtip-icon .ui-icon:hover{ color:#000000;text-decoration:none;cursor:pointer;opacity:0.4;filter:alpha(opacity=40)} .qtip:not(.ie9haxors) div.qtip-content,.qtip:not(.ie9haxors) div.qtip-titlebar{filter:none;-ms-filter:none}.qtip .qtip-tip{margin:0 auto;overflow:hidden;z-index:10} x:-o-prefocus,.qtip .qtip-tip{visibility:hidden}.qtip .qtip-tip,.qtip .qtip-tip .qtip-vml,.qtip .qtip-tip canvas{position:absolute;color:#123456;background:transparent;border:0 dashed transparent}.qtip .qtip-tip canvas{top:0;left:0}.qtip .qtip-tip .qtip-vml{behavior:url("https://nurdspace.nl/extensions/SemanticMediaWiki/resources/jquery/#default#VML");display:inline-block;visibility:visible}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:9ee7c93842fbd85e4f4b928087c919cd */
+div.smwtt{color:#000000} span.smwttpersist span.smwttcontent{color:#888888;font-style:italic;font-size:90%} span.smwttinline span.smwttcontent{display:none;speak:none} span.smwtticon{display:none} span.smwttactivepersist{cursor:help;color:#0000C8} span.smwttactiveinline{color:#BB7700;text-decoration:none} img.smwttimg{padding-right:5px;padding-left:4px} .smwttcontent{display:none} .smwtticon{padding:14px 12px 0 0;white-space:nowrap;margin-bottom:-1px} .smwtticon.info{display:inline-block;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABmJLR0QAQACXAOIX6M4XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1woNCAQvupvvrgAAAgpJREFUKBUFwTtME3EAwOHf3f961+vd9Sh9HEVINUrFhAbRmCgGo9FodCFMLhomJ6MmJsbF1Z2ExMHBUQc3BmOigyERB0ElQHgECRYECrRC26OPa3t+nwQAAI7aO/K458yJeK8qOA74dY/1hbWdxZWJsVUoeAAKAImh2NDdR/duD54cdRLRdMQydB84KJaPzufyyx+6Tr+Zej/2jr1vBUHiin3j/pPnwzcvPMv0OKlb/YlAT4cupR1d0lRNNWwrmUhEB+tmSl7/vTktMiNPhy9dvviyM2FYnZEgpRp8WS3htaC/W2du64iWLAUl1RgoY84qiiJdU03TKFR9vv+tIZQGsiTojqg0WrDtwlHVR7PscCDAVaXoEV3KN+hCELUVVBFgNBOkXZd5NVPhoC6TL0J2v8FhnbiCUBtlX2WzInB1jZiuEQ4KfhVgrR7ErUO+UsMlgCwUT6FRW9YU2TdMXbIsjbglmD+EPQ9iYQFo1Go6Xq3c8hveolze2/hY3M6u2IaGHRI4JpxthyRVHAPCIQXbDFLcyi6WcuufhLs2lXMxsy0tkk51tDkdYVU6ZkosbFXxAwF290vN6amfM0uf374oTI5/lQAAYfddP5e58/BBuivel4qF4k0f/uy7u0sbubn5ifHX7srkLNCUAAAAQtFUW/LUQLI9HHGaPv6/Yj63s/pju1LYPAQA+A8p2cUweh5dZAAAAABJRU5ErkJggg==) no-repeat left bottom;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/util/../../images/info.png?2017-05-18T17:35:00Z) no-repeat left bottom!ie}.smwtticon.service{display:inline-block;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABmJLR0QAQACXAOIX6M4XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1woNCAQvupvvrgAAAgpJREFUKBUFwTtME3EAwOHf3f961+vd9Sh9HEVINUrFhAbRmCgGo9FodCFMLhomJ6MmJsbF1Z2ExMHBUQc3BmOigyERB0ElQHgECRYECrRC26OPa3t+nwQAAI7aO/K458yJeK8qOA74dY/1hbWdxZWJsVUoeAAKAImh2NDdR/duD54cdRLRdMQydB84KJaPzufyyx+6Tr+Zej/2jr1vBUHiin3j/pPnwzcvPMv0OKlb/YlAT4cupR1d0lRNNWwrmUhEB+tmSl7/vTktMiNPhy9dvviyM2FYnZEgpRp8WS3htaC/W2du64iWLAUl1RgoY84qiiJdU03TKFR9vv+tIZQGsiTojqg0WrDtwlHVR7PscCDAVaXoEV3KN+hCELUVVBFgNBOkXZd5NVPhoC6TL0J2v8FhnbiCUBtlX2WzInB1jZiuEQ4KfhVgrR7ErUO+UsMlgCwUT6FRW9YU2TdMXbIsjbglmD+EPQ9iYQFo1Go6Xq3c8hveolze2/hY3M6u2IaGHRI4JpxthyRVHAPCIQXbDFLcyi6WcuufhLs2lXMxsy0tkk51tDkdYVU6ZkosbFXxAwF290vN6amfM0uf374oTI5/lQAAYfddP5e58/BBuivel4qF4k0f/uy7u0sbubn5ifHX7srkLNCUAAAAQtFUW/LUQLI9HHGaPv6/Yj63s/pju1LYPAQA+A8p2cUweh5dZAAAAABJRU5ErkJggg==) no-repeat left bottom;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/util/../../images/info.png?2017-05-18T17:35:00Z) no-repeat left bottom!ie}.smwtticon.warning{display:inline-block;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZ1JREFUKFOVy79rE3EcxvH39+7y8/q9pF4S0xi0mEiaMxV68Yxg8PeiVyhV6iCIQhErHUScFJxcHAX/Azf/AgWXWlsUhyrYioMiqKgoiEgrJTH3cSuldvE9Pg8vkw3Nt6lfHuZ68g9fnv/k2/pPRDDWD098bD1gTO4cdS+NNowp38ZhQ2tgZgQSWo3kDgyPpU/esSuHd4fnK6o1lERtCuIp0tmGO73sHavevf8B8Y7uaDT7pwMXvSmwEkbgNHeFb1eLPH22wNJKnka7enxAG+1/wKxPpq+SuuaeOKSzuSQxq0vGjZML99vj+xJXDmoKa2DOx0znOVUcL7fNrXl8v0OtZhIEv1GFFLUJt3XW43TRJAZgGBal/lbsjN0sZeENIkuEoQUsAq/RQcZpHjEnzpUpA/DqAld/zOjVqOdJFO2RuXlPhuo5efBwUKJou0S9gvx6HO/cG+OmiGD1FdSU3tZNyNdPAFQd4cbFHvUty8jnCOhhl6JYfZBJ4JY1+1IeObc770S6ChClQCvhxaKwEAEISqE+vuf7XkCJCP/TX7cEexPi9whUAAAAAElFTkSuQmCC) no-repeat left bottom;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/util/../../images/warning.png?2017-05-18T17:35:00Z) no-repeat left bottom!ie}.smwtticon.note{display:inline-block;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgtJREFUeNokUctqU1EUXefk5iY3D2MrSWOamyq9jYO2BovUR41O1Iykov6Bc6WDDh36A4oKnYkORZBCoA6KI1GrEKhoFWOo1qhJk6Z539c57sTB5gzOWns9NpMA3KCK0s0TsHwiBsW3qPi0OYerbmP89IaVnFvtMn/dmEginU5DITyYLSA4y40embp3MDWVVoNhgKvot1sob699/OqdvM0MY32AVTrZWZhhfnEsk85HEikOxoERnbYwBLxeGNH4jK/wdq1W1Bd7h8fySnlei4WT0ZV4ROWivQt4A+AzV0DrIV8/AtQA9Onjyt7G6spmOJHhb6IXrkbCnqOyuw+YNL0aTRPSpOnVidgE7A70Q/7x+pf315Wgph1TpAVBOcApktUBnN7/t9/AoBT6REAl8f3dBcW07R1pdSGkSvaJIBzIWpHUWkRqDrNAWENFIWJBZafWKZgjbWghDZIRgUK7Hx4PugNzXSK1wZmLVq0CO5ot8kw2Vyg70U+M/Eu7D0lWPLm78GSXKEOD7JlAu4rvTVWwmPGc/frzF63S5kIgv7SeOGCp0usHUmfAhAtW3SIdga2ffZTnl++nZk/dYlJKkDBePXtyOfb56cO4W5rUWH9YQEcEsI2U+9u48WD63KVlY0K3hpeWjgMxqr+snr9zslL5do3t/ThLnYXsUKLIY8YLj22+Y441gOKfAAMAeeDgUIIDAXwAAAAASUVORK5CYII=) no-repeat left bottom;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/util/../../images/note.png?2017-05-18T17:35:00Z) no-repeat left bottom!ie}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:0873b98b21cfe58ec43b527f58893968 */
+span.smwbuiltin,span.smwttactiveinline span.smwbuiltin{font-style:italic} div.smwpre{font-family:monospace;padding:1em;border:1px dashed #2f6fab;color:black;background-color:#f9f9f9;line-height:1.1em;margin-bottom:0.5em;margin-top:0.5em;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;word-break:break-word;margin-right:5px} #smwfootbr{clear:both} span.smwsortkey{display:none} a.sortheader:hover{text-decoration:none} div.smwtimeline{border:1px solid #AAAAAA;background-color:#F9F9F9;  }span.smwtlevent,span.smwtlband,span.smwtlsize,span.smwtlposition{display:none;speak:none}span.smwtlcomment{font-style:italic;padding:5px} div.smwfact{clear:both;background-color:#F9F9F9;padding:5px;margin-top:1em;border:1px solid #AAAAAA;font-size:95%;min-height:23px; }div.smwfact td,div.smwfact tr,div.smwfact table{background-color:#F9F9F9}.smwfactboxhead{font-size:110%;font-weight:bold;float:left;margin-bottom:2px;max-width:90%}table.smwfacttable{border-top:1px dotted #AAAAAA;width:100%;clear:both}td.smwpropname,th.smwpropname,td.smwspecname{text-align:right;vertical-align:top;padding-right:1em}td.smwprops,td.smwspecs{vertical-align:top;width:75%}div.smwhr hr{background-color:#DDDDDD;color:#DDDDDD} span.smwwarning{color:#888888;font-style:italic;font-size:90%} span.smwsearchicon{padding-right:16px;margin-right:2px;color:#888888;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAABC1BMVEU+S114jayTpb6Im7eMn7qhsceBlbOYqcKXp8GDl7N2i6rJ0uCYqcJogKB9kq+KnLipt81qgKF8kK9qgKF4jayntstheJpsgqOSo75RaIxWbpCIm7fAy9tlfJ5keptedZdHXX5bcpWBlbOersajssmVp79lfJ5thKN2i6phd5lTa45GW3lPZ4plfJ5le5xRaYxbcpV3jKt2i6pWbpBKYoVOZolSao2HmrZ4jaxTa45JYYRJYYSHmrZedZdFWnhTa45ieZtVbZCzv9Lm6/Ha4Onp7fKks8rb4uvf5e3h5u7X3um2wtXQ2OTAy9vW3efl6fCmtcrJ0uDGz96jssm5xdaruc6uu8+9yNnt8PXd7KeZAAAAQnRSTlMACfbevtlP8sRPTv2lFfRF2Cz1A7jZLdG4HFbm/q8vBAxjxO/syrHaxk0EByM4NyUrutRNBAI6xeJdADjU4QFO3NoNTLabAAAAeElEQVQIHQXBvQ7BUACA0e+7P020EQsDC4NBYrZJ38BTewcmg8XGomnjRso50QlUuSkA1p9TenF2+oRUH7/DzMoChJJH3n2bEpDS0CS7kAVCntd9txhjBFzp7he86h03qqp6kb2qbm8qABy06Y0A8FjHcTkIANCqf7L2G5qa4UzTAAAAAElFTkSuQmCC) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/searchgray_iconsmall.png?2017-05-18T17:35:00Z) center right no-repeat!ie}#bodyContent span.smwsearch a{padding-right:14px;margin-right:2px;color:#888888;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAABC1BMVEU+S114jayTpb6Im7eMn7qhsceBlbOYqcKXp8GDl7N2i6rJ0uCYqcJogKB9kq+KnLipt81qgKF8kK9qgKF4jayntstheJpsgqOSo75RaIxWbpCIm7fAy9tlfJ5keptedZdHXX5bcpWBlbOersajssmVp79lfJ5thKN2i6phd5lTa45GW3lPZ4plfJ5le5xRaYxbcpV3jKt2i6pWbpBKYoVOZolSao2HmrZ4jaxTa45JYYRJYYSHmrZedZdFWnhTa45ieZtVbZCzv9Lm6/Ha4Onp7fKks8rb4uvf5e3h5u7X3um2wtXQ2OTAy9vW3efl6fCmtcrJ0uDGz96jssm5xdaruc6uu8+9yNnt8PXd7KeZAAAAQnRSTlMACfbevtlP8sRPTv2lFfRF2Cz1A7jZLdG4HFbm/q8vBAxjxO/syrHaxk0EByM4NyUrutRNBAI6xeJdADjU4QFO3NoNTLabAAAAeElEQVQIHQXBvQ7BUACA0e+7P020EQsDC4NBYrZJ38BTewcmg8XGomnjRso50QlUuSkA1p9TenF2+oRUH7/DzMoChJJH3n2bEpDS0CS7kAVCntd9txhjBFzp7he86h03qqp6kb2qbm8qABy06Y0A8FjHcTkIANCqf7L2G5qa4UzTAAAAAElFTkSuQmCC) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/searchgray_iconsmall.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:10px 10px}#bodyContent span.smwsearch a:hover{text-decoration:none;color:#0000FF;padding-right:16px;margin-right:0px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALySURBVDgRlcFraNVlHMDx7+95nv/zP+d/LnObeVtz2uyCrRUVDAIHMbIXltUgKRYR7kWvupjYDSEkgkgoKCiJfGeRzqw0CvYuahBWyrZWuWihuWNrZ+e2c87OZf//U1DB8EXU52P27XuV9takiiVS95ZjV+xdjK3uxbO0sFi15ewnlBYO1pZqP9YbTZQSLmeUOF1eNs+fj219QXdt1i2rfXwPlpxKho3qbpme3B7+/N2wUoyKCJcz9VB2ZFfdcKDtxh7p3hiRiMFSDfKFJjadwF/fd+V8pfhmYXK83ynJgLCSKanU47Et18qmDsc1axXtAlPzEekOS7XhSK3SmNt6uuemJnc2K5VDog0rmaptvWXtmgRBLKJNBL/h8DyhPRBqScGKI31dB2c8c2exsHhIW8tKZtmm/MBGFIohZ2oRQaDYkFYECgLAOjBa0ajVk8VSGc+3rGSa+Us18XQ8bIREgSKIC74G5aAdsEAjjCgXioXSYgVTX0bE8Q+zMD0xVs2V7tKtCepNiJRQB1JAClgjwskvvuXCzOypWn2ZeLiEA5wD58DkZs69fO7UyYGBPQ/FYxoi51D8JRBhNl/i05FRWlpaLtzReZbOxiSzRcNcCXIVMErL2E+fffSYNe61/t33pUxbEgeIwOmpGY6/fQxj4mzrTe/vyUz0zzflLU/CeSOgcRhRiqhZPzx+/OjEr998tXdDd2dfPBHT1flc4eL0Lyc6OzeeXt9WHu52Xw5etTk9UP0+f2szsg87XMEhGP4kWiNEXxczmQfERQSpBIXMHKVcka1XO/QP76/rvr9rsOf2IezIu3f/PpY/8lvRewTIGv4mImjPw/MtnvXwYhbtB9jqefzKxaMfj+R74+u6nrh+1xDN8MiO7Gj+8ELZDhv+lcOJRhtTuZRt7Hn9xQ/do88MPnnz0BAPyns73ziRf8fwH/lWu9mF5acPHvggevalXU+137QN9fn4PYb/wfN0M1cKn3tl/7FNbVt6tk9L39k/AH8KLAsrDQkDAAAAAElFTkSuQmCC) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/search_icon.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:13px 13px}#bodyContent span.swmfactboxheadbrowse a{padding-right:16px;margin-right:2px;color:#000000;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAA5FBMVEUAAADb3uv///+gqcBJYqGTmq24v9KJkamboLBtfqOnrbuSmqyqr7yVnK3o6e3n6OrKzdaWna7O0NWMlKiQl6qWm6yRma3DxczEyM+Olqyeo7J+iaamq7qZoLGMlKrg4eiYobqFjqfBxMyQl6hXbaGXnK+hprmcobPEx9BZbaGkqriIkayjp7d1g6iztsSytsZzf6GcobSaobjq6++Umq5abZ6aoLJre6NqeqJ7hqfg4umvtsp0g6h9iaff4el3hKVld6aUoL6wt8meo7SXnbCUm66Jkqnq6+64usRfcqOxs8Dm5+teFG05AAAAAXRSTlMAQObYZgAAAH9JREFUeF4dymMSRDEABOGZ5HFt27Zt3v8+m833r6saSqDl6aSC0ELhXN7r80egVBYZRmOMJ5LAIV0lsy55LRRRKlNYbs0SrDfQpBCybUgh2EXvH4aOPgZDtRkjtY0nmM7m5HtJrtYbYLvb07Z5PJ2hXMybad4fEtrz5TifL4AfAxMLmJTt7hwAAAAASUVORK5CYII=) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/browse_iconsmall.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:13px 13px}#bodyContent span.swmfactboxheadbrowse a:hover{text-decoration:none;color:#0000FF;padding-right:18px;margin-right:0px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA81BMVEUAAADByOQOLn7///8BInfg5O2xuthsf7ODk8CmqbEnQ4slQYoYNYJqea6BhZaSlJ9kbo5fc6xld62/v8Fnea6BhZdbb6lKY6axsrWIjJe/wMQ6UZOCkMVoeq6Gk79BWZpBWJqCkr4uSo8mRI8PLnqio6plcppIXp+LjprFxsgmQYMrRo4nRJI6TX+ytLyKl8xseah7ir9cbqUDJXeJl8xWbLBue6xPZaeYm6V+hqCLl841S34MLXwsSZJVaasSMYBcaYZUZphLYqBsfrFKYaB3iLcwS5EvSpFjeK1neq4zTpE2ToxQaKlSXoIMKW9idKyur7PDoCJEAAAAAXRSTlMAQObYZgAAAJtJREFUGFdlT8USg1AQ292HQ93d3d3dvf//NYWBHhhyS2ZiAAYCnpC7GoU/al5XsjPs9V9fk8tEPn8q+AlH6jGDxxMrwnQmm8N8oVjShXLljXhS1ANio9kCaK+7yIQ9aUeB4XgyhdkcGZOWA44kxnC0hZ3OeXHDcSTyurJwCg6LGXom7WKFmrVXRb1Ztcawu20YyI+nbbrznP3+D9crFuL3dLY6AAAAAElFTkSuQmCC) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/browse_icon.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:15px 15px}#bodyContent span.smwbrowse a{padding-right:14px;margin-right:2px;color:#888888;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAA5FBMVEUAAADb3uv///+gqcBJYqGTmq24v9KJkamboLBtfqOnrbuSmqyqr7yVnK3o6e3n6OrKzdaWna7O0NWMlKiQl6qWm6yRma3DxczEyM+Olqyeo7J+iaamq7qZoLGMlKrg4eiYobqFjqfBxMyQl6hXbaGXnK+hprmcobPEx9BZbaGkqriIkayjp7d1g6iztsSytsZzf6GcobSaobjq6++Umq5abZ6aoLJre6NqeqJ7hqfg4umvtsp0g6h9iaff4el3hKVld6aUoL6wt8meo7SXnbCUm66Jkqnq6+64usRfcqOxs8Dm5+teFG05AAAAAXRSTlMAQObYZgAAAH9JREFUeF4dymMSRDEABOGZ5HFt27Zt3v8+m833r6saSqDl6aSC0ELhXN7r80egVBYZRmOMJ5LAIV0lsy55LRRRKlNYbs0SrDfQpBCybUgh2EXvH4aOPgZDtRkjtY0nmM7m5HtJrtYbYLvb07Z5PJ2hXMybad4fEtrz5TifL4AfAxMLmJTt7hwAAAAASUVORK5CYII=) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/browse_iconsmall.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:10px 10px}#bodyContent span.smwbrowse a:hover{text-decoration:none;color:#0000FF;padding-right:16px;margin-right:0px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA81BMVEUAAADByOQOLn7///8BInfg5O2xuthsf7ODk8CmqbEnQ4slQYoYNYJqea6BhZaSlJ9kbo5fc6xld62/v8Fnea6BhZdbb6lKY6axsrWIjJe/wMQ6UZOCkMVoeq6Gk79BWZpBWJqCkr4uSo8mRI8PLnqio6plcppIXp+LjprFxsgmQYMrRo4nRJI6TX+ytLyKl8xseah7ir9cbqUDJXeJl8xWbLBue6xPZaeYm6V+hqCLl841S34MLXwsSZJVaasSMYBcaYZUZphLYqBsfrFKYaB3iLcwS5EvSpFjeK1neq4zTpE2ToxQaKlSXoIMKW9idKyur7PDoCJEAAAAAXRSTlMAQObYZgAAAJtJREFUGFdlT8USg1AQ292HQ93d3d3dvf//NYWBHhhyS2ZiAAYCnpC7GoU/al5XsjPs9V9fk8tEPn8q+AlH6jGDxxMrwnQmm8N8oVjShXLljXhS1ANio9kCaK+7yIQ9aUeB4XgyhdkcGZOWA44kxnC0hZ3OeXHDcSTyurJwCg6LGXom7WKFmrVXRb1Ztcawu20YyI+nbbrznP3+D9crFuL3dLY6AAAAAElFTkSuQmCC) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/browse_icon.png?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:13px 13px}#bodyContent span.smwmap a{padding-right:20px;color:#888888;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAANkE3LLaAgAAAzBJREFUOBGlwTtsGwUAgOH/zufHOe9zHBzsJM6DhpRUCWmjCiolKgOiS6VKrWBghSUswEAlJjYGRlQECypQhoIEAqlNuwSiJhSqkJAqbR40pnbjR/w6+x72+Xw+itgqMfF98D8JPCn2thwfDZ9/cXro7LOjfSflgLetpBoP1u9llm7/kbqirn+wyX/pmLz4wvsfXV9PplW30XBcu+m4dtNxrUbTNcyGu7r2sH72jc8/hHmJJwUm3pu79OUvVcO03ZJad1PpirtxL+3e2Uy5v24k3b1EwVWrlltW6+75hS++hgseHvPwjyPv9L72yuyNhddPhTXDIpEqki/p6GaDoOzlsKgjCCJOs4VmWBwd7T+2eDerGwdLqxKPdcltb710cnwgmVHJl3R2EjkkSaTVclG6g9hNh/HhPrySh939Am3BAPPHn7l4tfDuZQ+86RVD8scdbb6wLHvJ5quoWo1sQaOq1ckVdAajCqeOD2M3HBwHDgsGubwp7z3MbYn+8Z6oKAjDK+sJvrm+gVeSmBqP4TgumztZDrIauUONRKpMOqfRdFoUSzXUqondap3wBMJzMURhIRDwismMymC/wpn5CSaPRCiWDXp7giCIfHJllWLZJBLqolypc215i2yxui02/T7d5/PYlWqNnk6ZzZ00uw/yyD4fF85MMTsdY2RAQdOaJA+q5EsmZr2BZdv4vP6qx8nphtw/8qrfHwjrhoUousSjvcT6u7h5a4fFn7fJ5U062/y4Lgz1K+wk8rQQ+HN365IEa7aZ6f4+Mn3uaPJRlopmMRZXiD3dgW40qNUddMnCrNsc5FRUrYZhNUhnD0v1/a9uioBkZVcWq6WD0lg8Qme7TKVqIXqgL9TO2GAIBBerYeP3SeylcgRkmcz24lUwyx4gAM1uvZgkEp898fzkiNinyKzcSVBSTSLhDtqDPsJKO0NRhZCisPLTd3fVxLXPgLwHaAESzYqhZrfVztBQPBobaotGFGYmY4S62wkGZXqVbvb2s+6NHy7fytz/9lPgPpAR+JcE9AIDIE6MHzs9N3/65ZmZqeeeQhCkR+m8/vvab3vLSz8u62rqNvAXkAFqfwOkPI+h92xJFAAAAABJRU5ErkJggg==) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/world.png?2017-05-18T17:35:00Z) center right no-repeat!ie}#bodyContent span.smwmap a:hover{padding-right:20px;color:#0000FF;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAANkE3LLaAgAAAzBJREFUOBGlwTtsGwUAgOH/zufHOe9zHBzsJM6DhpRUCWmjCiolKgOiS6VKrWBghSUswEAlJjYGRlQECypQhoIEAqlNuwSiJhSqkJAqbR40pnbjR/w6+x72+Xw+itgqMfF98D8JPCn2thwfDZ9/cXro7LOjfSflgLetpBoP1u9llm7/kbqirn+wyX/pmLz4wvsfXV9PplW30XBcu+m4dtNxrUbTNcyGu7r2sH72jc8/hHmJJwUm3pu79OUvVcO03ZJad1PpirtxL+3e2Uy5v24k3b1EwVWrlltW6+75hS++hgseHvPwjyPv9L72yuyNhddPhTXDIpEqki/p6GaDoOzlsKgjCCJOs4VmWBwd7T+2eDerGwdLqxKPdcltb710cnwgmVHJl3R2EjkkSaTVclG6g9hNh/HhPrySh939Am3BAPPHn7l4tfDuZQ+86RVD8scdbb6wLHvJ5quoWo1sQaOq1ckVdAajCqeOD2M3HBwHDgsGubwp7z3MbYn+8Z6oKAjDK+sJvrm+gVeSmBqP4TgumztZDrIauUONRKpMOqfRdFoUSzXUqondap3wBMJzMURhIRDwismMymC/wpn5CSaPRCiWDXp7giCIfHJllWLZJBLqolypc215i2yxui02/T7d5/PYlWqNnk6ZzZ00uw/yyD4fF85MMTsdY2RAQdOaJA+q5EsmZr2BZdv4vP6qx8nphtw/8qrfHwjrhoUousSjvcT6u7h5a4fFn7fJ5U062/y4Lgz1K+wk8rQQ+HN365IEa7aZ6f4+Mn3uaPJRlopmMRZXiD3dgW40qNUddMnCrNsc5FRUrYZhNUhnD0v1/a9uioBkZVcWq6WD0lg8Qme7TKVqIXqgL9TO2GAIBBerYeP3SeylcgRkmcz24lUwyx4gAM1uvZgkEp898fzkiNinyKzcSVBSTSLhDtqDPsJKO0NRhZCisPLTd3fVxLXPgLwHaAESzYqhZrfVztBQPBobaotGFGYmY4S62wkGZXqVbvb2s+6NHy7fytz/9lPgPpAR+JcE9AIDIE6MHzs9N3/65ZmZqeeeQhCkR+m8/vvab3vLSz8u62rqNvAXkAFqfwOkPI+h92xJFAAAAABJRU5ErkJggg==) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/world.png?2017-05-18T17:35:00Z) center right no-repeat!ie}.smwrdflink{float:right;font-size:small;padding:2px 0 0 0}.concept-documenation{border-top:1px dotted #AAAAAA}#bodyContent span.rdflink{float:right}#bodyContent span.rdflink a{padding-right:15px;color:#888888;background:url(data:image/gif;base64,R0lGODlhEQASAIQeAIWjzhpTo0h1tvH0+SpeqUh1tWeMwjlqr+Hp89Ld7cLR5rPG4RpSo8PS53aYyDhpr5Wv1FiBvO/z+KS62uDo8ileqWaMwXWXx7LF4KO62pSu1FeAu9Hc7P///wtHnQtHnSH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQBAAAfACwAAAAAEQASAAAFU+AnjuQneKhQriclpSvJSC/qxaNX2/hn/6pY6udRAX03k82Y6dROJKjI01H8VknfDoXNbbmkougEBC+DZDES1aHAcChKZ9nzza89HbGefvfSDh8hADs=) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/rdf_flyer.18.gif?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:10px 10px}#bodyContent span.rdflink a:hover{text-decoration:none;color:#0000FF;padding-right:15px;margin-right:0px;background:url(data:image/gif;base64,R0lGODlhEQASAIQeAIWjzhpTo0h1tvH0+SpeqUh1tWeMwjlqr+Hp89Ld7cLR5rPG4RpSo8PS53aYyDhpr5Wv1FiBvO/z+KS62uDo8ileqWaMwXWXx7LF4KO62pSu1FeAu9Hc7P///wtHnQtHnSH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQBAAAfACwAAAAAEQASAAAFU+AnjuQneKhQriclpSvJSC/qxaNX2/hn/6pY6udRAX03k82Y6dROJKjI01H8VknfDoXNbbmkougEBC+DZDES1aHAcChKZ9nzza89HbGefvfSDh8hADs=) center right no-repeat;background:url(https://nurdspace.nl/extensions/SemanticMediaWiki/resources/smw/../images/rdf_flyer.18.gif?2017-05-18T17:35:00Z) center right no-repeat!ie;background-size:10px 10px} table.smwb-factbox{border-left:8px solid #DDDDDD;width:100% }tr.smwb-title{font-size:200%;background-color:#DDDDDD;line-height:1.5}tr.smwb-title td{padding-left:5px;border-bottom:2px solid white}tr.smwb-propvalue{width:100%;background-color:#EEEEEE}tr.smwb-propvalue th{text-align:right;vertical-align:top;font-weight:bold;font-size:120%;background-color:#DDDDDD;padding:0.2em 0.6em;border-bottom:2px solid white;border-top:2px solid white}tr.smwb-propvalue td{padding-left:0.4em;background-color:#EEEEEE;border:0px solid white;border-bottom:2px solid white;border-top:2px solid white;width:90%}tr.smwb-center{background-color:#DDDDDD}span.smwb-value{} table.smwb-ifactbox{border-right:8px solid #DDDDDD;width:100% }tr.smwb-ititle{font-size:200%;background-color:#DDDDDD;line-height:1.5}tr.smwb-ititle td{padding-left:5px;border-bottom:2px solid white}tr.smwb-ipropvalue{width:100%;background-color:#EEEEEE;text-align:right}tr.smwb-ipropvalue th{text-align:left;font-weight:bold;font-size:120%;background-color:#DDDDDD;padding:0.2em 0.6em;border-bottom:3px solid white;border-top:3px solid white}tr.smwb-ipropvalue td{background-color:#EEEEEE;border-bottom:3px solid white;border-top:3px solid white;padding-right:1em;width:90%}span.smwb-ivalue{} .smw-spinner .text{padding-left:2.1em;font-size:12px;vertical-align:middle} .smw-spinner.left.mw-small-spinner{background-position:left;vertical-align:middle;display:inline-block;padding:0px !important} .smw-spinner.center.mw-small-spinner{vertical-align:middle;display:inline-block;padding:0px !important} table.smw-ask-query .smw-ask-query-condition{width:100%}table.smw-ask-query .smw-ask-query-printout{width:100%}.smw-form-horizontalrule{margin-bottom:10px}.smw-form-select,.smw-form-input{padding:1px 1px}.smw-form-checkbox{vertical-align:middle;cursor:pointer}label.smw-form-checkbox{vertical-align:middle;cursor:pointer}.smw-editpage-help{background-color:#F0F0F0;border:1px solid silver; padding:1em 1em 1.5em 1em;margin-bottom:2em}.smw-column-header{font-weight:bold;font-size:1.17em;line-height:1.6;margin-top:0.3em;margin-bottom:0;padding-bottom:0;color:black;overflow:hidden;padding-top:.5em}.smw-column{float:left;word-wrap:break-word}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:17ee795fd6623e524aa2fecdecd056dc */</style><style>
+.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(https://nurdspace.nl/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_sprite.png?2017-05-18T17:30:00Z)}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:0.8;cursor:pointer;z-index:8060}#fancybox-loading div{width:44px;height:44px;background:url(https://nurdspace.nl/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_loading.gif?2017-05-18T17:30:00Z) center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url(https://nurdspace.nl/extensions/FancyBoxThumbs/modules/fancyBox/source/blank.gif?2017-05-18T17:30:00Z); -webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important} .fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url(https://nurdspace.nl/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_overlay.png?2017-05-18T17:30:00Z)}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll} .fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent; background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:0e176553a5e922c0ee185f1acc0ec2a0 */
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none} caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:6c1d24e90626cec584f0869483f983e7 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:9f9511aa4ef920d34591113e825e6a1e */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(/resources/src/mediawiki.action/images/green-checkmark.png?2017-05-18T17:30:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:3368bbbf161022ed88768d96ea62e2d9 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><style>
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(/resources/src/jquery/images/sort_both.gif?2017-05-18T17:30:00Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}table.jquery-tablesorter th.headerSortUp{background-image:url(data:image/gif;base64,R0lGODlhFQAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAzODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODc0MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODczMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDM4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAEAAACDYwfoAvoz9qbZ9FrJC0AOw==);background-image:url(/resources/src/jquery/images/sort_up.gif?2017-05-18T17:30:00Z)!ie}table.jquery-tablesorter th.headerSortDown{background-image:url(data:image/gif;base64,R0lGODlhFQAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFNzNGQjI3MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFNzNGQjI2MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDI4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDI4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAEAAACDYyPAcmtsJyDVDKKWQEAOw==);background-image:url(/resources/src/jquery/images/sort_down.gif?2017-05-18T17:30:00Z)!ie}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:ecd6bfbbea9a129d7146c24e9aeef3cd */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-css:7:28062795bc62e5035131cadb323025e5 */</style>
+<script type="text/javascript" async="" src="./ESP8266 - NURDspace_files/ga.js.download"></script><script src="./ESP8266 - NURDspace_files/load(4).php5"></script><script src="./ESP8266 - NURDspace_files/load(5).php5"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ESP8266","wgTitle":"ESP8266","wgCurRevisionId":5231,"wgRevisionId":5231,"wgArticleId":941,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Projects"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"ESP8266","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgCargoFields":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","edgValues":[],"sfgEDSettings":null,"sdgDownArrowImage":"/extensions/SemanticDrilldown/skins/down-arrow.png","sdgRightArrowImage":"/extensions/SemanticDrilldown/skins/right-arrow.png","wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"gumax","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs170":false,"searchNs171":false,"searchNs274":false,"searchNs275":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: nurds_nurdspace:resourceloader:filter:minify-js:7:795b6b70d020e65328f10d5620923aa6 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.style","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script src="./ESP8266 - NURDspace_files/load(6).php5"></script><script src="./ESP8266 - NURDspace_files/load(7).php5"></script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-ESP8266 skin-gumax action-view">
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tbody><tr><td id="gumax-page-table-left"><img src="./ESP8266 - NURDspace_files/blank.gif" alt=""></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+				<li id="pt-login"><a href="https://nurdspace.nl/simplesaml/module.php/core/as_login.php?AuthId=default-sp&amp;ReturnTo=https%3A%2F%2Fnurdspace.nl%2FESP8266">Log in</a></li>
+		</ul>
+	</div>
+	<!-- end of Login -->
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(/skins/common/images/nurdslogo.png);" href="https://nurdspace.nl/Main_Page" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="https://nurdspace.nl/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" autocomplete="off">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go">
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search">
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+	<div class="visualClear"></div>
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+				<div class="gumax-portlet gumax-p-navigation">
+					<h5>Navigation</h5>
+	
+							<ul>
+										<li id="n-Home"><a href="https://nurdspace.nl/Main_Page">Home</a></li>
+										<li id="n-About-the-Space"><a href="https://nurdspace.nl/Space">About the Space</a></li>
+										<li id="n-Events"><a href="https://nurdspace.nl/Events">Events</a></li>
+										<li id="n-Tools"><a href="https://nurdspace.nl/Tools">Tools</a></li>
+										<li id="n-Projects"><a href="https://nurdspace.nl/Projects">Projects</a></li>
+										<li id="n-Members"><a href="https://nurdspace.nl/Category:Members">Members</a></li>
+										<li id="n-recentchanges"><a href="https://nurdspace.nl/Special:RecentChanges">Recent changes</a></li>
+								</ul>
+
+					</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+	<div class="visualClear"></div>
+
+	<!-- ///// gumax-body ///// -->
+	<div id="gumax-body">
+
+		<table border="0" id="gumax-content-table" width="100%"><tbody><tr><td></td><td id="gumax-content-table-right" width="100%" valign="top" style="padding: 0; margin: 0">
+				<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+			 <li id="ca-nstab-main" class="selected"><a href="https://nurdspace.nl/ESP8266">Page</a></li>
+			 <li id="ca-talk" class="new"><a href="https://nurdspace.nl/index.php5?title=Talk:ESP8266&amp;action=edit&amp;redlink=1">Discussion</a></li>
+			 <li id="ca-form_edit"><a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;action=formedit">View form</a></li>
+			 <li id="ca-viewsource"><a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;action=edit">View source</a></li>
+			 <li id="ca-history"><a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;action=history">History</a></li>		</ul>
+	</div>
+		<!-- end of gumax-content-actions -->
+				<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading">ESP8266</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NURDspace</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="https://nurdspace.nl/ESP8266#column-one">navigation</a>, <a href="https://nurdspace.nl/ESP8266#searchInput">search</a></div>			<!-- start content -->
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="wikitable" style="float:right; clear:right; width:270px; margin:5px; font-size:95%; empty-cells:hide">
+
+<tbody><tr style="text-align:center;">
+<th colspan="2"> ESP8266
+</th></tr>
+<tr>
+<th colspan="2"><div style="margin:10px">
+<a href="https://nurdspace.nl/File:ESP8266.jpg" class="image fancybox"><img alt="ESP8266.jpg" src="./ESP8266 - NURDspace_files/260px-ESP8266.jpg" width="260" height="195" srcset="/images/thumb/5/55/ESP8266.jpg/390px-ESP8266.jpg 1.5x, /images/thumb/5/55/ESP8266.jpg/520px-ESP8266.jpg 2x"></a></div>
+</th></tr>
+<tr>
+<th> Participants
+</th>
+<td> <a href="https://nurdspace.nl/User:Buzz" title="User:Buzz">Buzz</a>, <a href="https://nurdspace.nl/User:Dreamer" title="User:Dreamer">Dreamer</a>, <a href="https://nurdspace.nl/User:Zarya" title="User:Zarya">Zarya</a>
+</td></tr>
+<tr>
+<th> Skills
+</th>
+<td> <a href="https://nurdspace.nl/Electronics" title="Electronics">Electronics</a>, <a href="https://nurdspace.nl/index.php5?title=Software&amp;action=edit&amp;redlink=1" class="new" title="Software (page does not exist)">Software</a>
+</td></tr>
+<tr>
+<th> Status
+</th>
+<td> <a href="https://nurdspace.nl/index.php5?title=Getting_parts&amp;action=edit&amp;redlink=1" class="new" title="Getting parts (page does not exist)">Getting parts</a>
+</td></tr>
+<tr>
+<th> Niche
+</th>
+<td> <a href="https://nurdspace.nl/Electronics" title="Electronics">Electronics</a>
+</td></tr>
+<tr>
+<th> Purpose
+</th>
+<td> <a href="https://nurdspace.nl/index.php5?title=Education&amp;action=edit&amp;redlink=1" class="new" title="Education (page does not exist)">Education</a>
+</td></tr>
+<tr>
+<th> Tool
+</th>
+<td> No
+</td></tr>
+<tr>
+<th> Location
+</th>
+<td>
+</td></tr>
+<tr>
+<th> Cost
+</th>
+<td> <a href="https://nurdspace.nl/index.php5?title=About_5_dollar_per_module&amp;action=edit&amp;redlink=1" class="new" title="About 5 dollar per module (page does not exist)">about 5 dollar per module</a>
+</td></tr>
+<tr>
+<th> Tool category
+</th>
+<td>
+</td></tr></tbody></table>
+<div style="position:fixed; top:10000px; right:10000px;">
+<p><strong class="selflink">ESP8266</strong>
+</p>
+<span class="smw-highlighter smwttinline" data-type="4" data-state="inline" data-title="Error" data-hasqtip="0"><span class="smwtticon warning"></span><div class="smwttcontent">"File:" cannot be used as a page name in this wiki.</div></span>
+<p>{{#if:No | [[Tool Owner::{{{ProjectParticipants}}} | }}
+{{#if:No | [[Tool Cost::about 5 dollar per module | }}
+</p>
+</div>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="https://nurdspace.nl/ESP8266#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://nurdspace.nl/ESP8266#Building_the_gcc_toolchain"><span class="tocnumber">1</span> <span class="toctext">Building the gcc toolchain</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="https://nurdspace.nl/ESP8266#Code_examples"><span class="tocnumber">2</span> <span class="toctext">Code examples</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="https://nurdspace.nl/ESP8266#Running_the_module"><span class="tocnumber">3</span> <span class="toctext">Running the module</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="https://nurdspace.nl/ESP8266#Uploading_code"><span class="tocnumber">4</span> <span class="toctext">Uploading code</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="https://nurdspace.nl/ESP8266#links"><span class="tocnumber">5</span> <span class="toctext">links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="https://nurdspace.nl/ESP8266#Internal_space_links"><span class="tocnumber">5.1</span> <span class="toctext">Internal space links</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="https://nurdspace.nl/ESP8266#External"><span class="tocnumber">5.2</span> <span class="toctext">External</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="https://nurdspace.nl/ESP8266#Datasheet"><span class="tocnumber">6</span> <span class="toctext">Datasheet</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="https://nurdspace.nl/ESP8266#Introduction"><span class="tocnumber">6.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="https://nurdspace.nl/ESP8266#Technical_Overview"><span class="tocnumber">6.2</span> <span class="toctext">Technical Overview</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="https://nurdspace.nl/ESP8266#Characteristics"><span class="tocnumber">6.3</span> <span class="toctext">Characteristics</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="https://nurdspace.nl/ESP8266#Schema"><span class="tocnumber">6.4</span> <span class="toctext">Schema</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="https://nurdspace.nl/ESP8266#Ultra-low_power_technology"><span class="tocnumber">6.5</span> <span class="toctext">Ultra-low power technology</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="https://nurdspace.nl/ESP8266#Maximum_integration"><span class="tocnumber">6.5.1</span> <span class="toctext">Maximum integration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="https://nurdspace.nl/ESP8266#ESP8266_application_subject"><span class="tocnumber">6.6</span> <span class="toctext">ESP8266 application subject</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="https://nurdspace.nl/ESP8266#Specifications"><span class="tocnumber">6.7</span> <span class="toctext">Specifications</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="https://nurdspace.nl/ESP8266#Power"><span class="tocnumber">6.7.1</span> <span class="toctext">Power</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="https://nurdspace.nl/ESP8266#RF_specifications"><span class="tocnumber">6.7.2</span> <span class="toctext">RF specifications</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="https://nurdspace.nl/ESP8266#CPU_and_memory"><span class="tocnumber">6.8</span> <span class="toctext">CPU and memory</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="https://nurdspace.nl/ESP8266#CPU_Interface"><span class="tocnumber">6.8.1</span> <span class="toctext">CPU Interface</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="https://nurdspace.nl/ESP8266#Storage_Controller"><span class="tocnumber">6.8.2</span> <span class="toctext">Storage Controller</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="https://nurdspace.nl/ESP8266#AHB_and_AHB_module"><span class="tocnumber">6.8.3</span> <span class="toctext">AHB and AHB module</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="https://nurdspace.nl/ESP8266#Interface"><span class="tocnumber">6.8.4</span> <span class="toctext">Interface</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="https://nurdspace.nl/ESP8266#Main_SI_.2F_SPI_control_.28optional.29"><span class="tocnumber">6.8.4.1</span> <span class="toctext">Main SI / SPI control (optional)</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="https://nurdspace.nl/ESP8266#General_Purpose_IO"><span class="tocnumber">6.8.4.2</span> <span class="toctext">General Purpose IO</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="https://nurdspace.nl/ESP8266#Digital_IO_pins"><span class="tocnumber">6.8.4.3</span> <span class="toctext">Digital IO pins</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="https://nurdspace.nl/ESP8266#Firmware_and_software_tools_development_kit"><span class="tocnumber">6.9</span> <span class="toctext">Firmware and software tools development kit</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="https://nurdspace.nl/ESP8266#Features"><span class="tocnumber">6.9.1</span> <span class="toctext">Features</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="https://nurdspace.nl/ESP8266#Power_Management"><span class="tocnumber">6.10</span> <span class="toctext">Power Management</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="https://nurdspace.nl/ESP8266#Clock_Management"><span class="tocnumber">6.11</span> <span class="toctext">Clock Management</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="https://nurdspace.nl/ESP8266#High_Frequency_Clock"><span class="tocnumber">6.11.1</span> <span class="toctext">High Frequency Clock</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="https://nurdspace.nl/ESP8266#External_Reference_Requirements"><span class="tocnumber">6.11.2</span> <span class="toctext">External Reference Requirements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="https://nurdspace.nl/ESP8266#Radio_receivers"><span class="tocnumber">6.12</span> <span class="toctext">Radio receivers</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="https://nurdspace.nl/ESP8266#Channel_Frequency"><span class="tocnumber">6.12.1</span> <span class="toctext">Channel Frequency</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="https://nurdspace.nl/ESP8266#2.4GHz_receiver"><span class="tocnumber">6.12.2</span> <span class="toctext">2.4GHz receiver</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="https://nurdspace.nl/ESP8266#2.4GHz_transmitter"><span class="tocnumber">6.12.3</span> <span class="toctext">2.4GHz transmitter</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="https://nurdspace.nl/ESP8266#Clock_generator"><span class="tocnumber">6.12.4</span> <span class="toctext">Clock generator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="https://nurdspace.nl/ESP8266#AT_Commands"><span class="tocnumber">7</span> <span class="toctext">AT Commands</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="https://nurdspace.nl/ESP8266#Format"><span class="tocnumber">7.1</span> <span class="toctext">Format</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="https://nurdspace.nl/ESP8266#Commands"><span class="tocnumber">7.2</span> <span class="toctext">Commands</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="https://nurdspace.nl/ESP8266#Pin_Definition"><span class="tocnumber">8</span> <span class="toctext">Pin Definition</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Building_the_gcc_toolchain">Building the gcc toolchain</span></h2>
+<p>have a look at the github wiki <a rel="nofollow" class="external free" href="https://github.com/esp8266/esp8266-wiki/wiki">https://github.com/esp8266/esp8266-wiki/wiki</a>
+</p>
+<h2><span class="mw-headline" id="Code_examples">Code examples</span></h2>
+<p>have a look at the github wiki <a rel="nofollow" class="external free" href="https://github.com/esp8266/esp8266-wiki/wiki">https://github.com/esp8266/esp8266-wiki/wiki</a>
+</p>
+<h2><span class="mw-headline" id="Running_the_module">Running the module</span></h2>
+<ul>
+<li> The modules pins only allow 3.3v (use a multi meter to check your serial lines if you are not sure)
+</li>
+<li> Connect CH_PD to VCC to make it boot
+</li>
+</ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Uploading_code">Uploading code</span></h2>
+<ul>
+<li> The modules pins only allow 3.3v (use a multi meter to check your serial lines if you are not sure)
+</li>
+</ul>
+<p>see <a rel="nofollow" class="external free" href="https://github.com/esp8266/esp8266-wiki/wiki/Uploading">https://github.com/esp8266/esp8266-wiki/wiki/Uploading</a>
+</p>
+<h2><span class="mw-headline" id="links">links</span></h2>
+<h3><span class="mw-headline" id="Internal_space_links">Internal space links</span></h3>
+<ul>
+<li> <a rel="nofollow" class="external free" href="https://git.nurdspace.lan/esp8266/led_example/source/">https://git.nurdspace.lan/esp8266/led_example/source/</a>
+</li>
+</ul>
+<h3><span class="mw-headline" id="External">External</span></h3>
+<ul>
+<li> SDK documentation (all chinees) <a rel="nofollow" class="external text" href="http://rghost.net/57965174%7C">DOCS</a>
+</li>
+<li> VM file <a rel="nofollow" class="external autonumber" href="http://pan.baidu.com/s/1dDf8Iy9">[1]</a> Password: i90l
+</li>
+<li> Forum about the module <a rel="nofollow" class="external free" href="http://www.esp8266.com/">http://www.esp8266.com/</a>
+</li>
+<li> seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html
+</li>
+<li> ESP8266 ROM Bootloader utility <a rel="nofollow" class="external free" href="https://github.com/themadinventor/esptool">https://github.com/themadinventor/esptool</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Datasheet">Datasheet</span></h2>
+<ul>
+<li> <a href="https://nurdspace.nl/File:ESP8266_Specifications_English.pdf" title="File:ESP8266 Specifications English.pdf"> English Datasheet</a>
+</li>
+<li> <a rel="nofollow" class="external free" href="http://www.seeedstudio.com/document/pdf/ESP8266%20Specifications(Chinese).pdf">http://www.seeedstudio.com/document/pdf/ESP8266%20Specifications(Chinese).pdf</a> (Chinese)
+</li>
+</ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Introduction">Introduction</span></h3>
+<p>Yue Xin intelligent high performance wireless connectivity platform --ESCP SOC, designers bring the Gospel to the mobile platform, it 
+At the lowest cost to provide maximum usability for WiFi capabilities embedded in other systems offer unlimited possibilities.
+</p>
+<h3><span class="mw-headline" id="Technical_Overview">Technical Overview</span></h3>
+<p>ESP8266 is a complete and self-contained Wi-Fi network solutions that can carry software applications, or through 
+Another application processor uninstall all Wi-Fi networking capabilities. 
+ESP8266 when the device is mounted and as the only application of the application processor, the flash memory can be started directly from an external 
+Move. Built-in cache memory will help improve system performance and reduce memory requirements. 
+Another situation is when wireless Internet access assume the task of Wi-Fi adapter, you can add it to any microcontroller-based design, the connection is simple, just by SPI / SDIO interface or central processor AHB bridge interface. 
+Processing and storage capacity on ESP8266 powerful piece, it can be integrated via GPIO ports sensors and other applications specific equipment to achieve the lowest early in the development and operation of at least occupy system resources. The ESP8266 highly integrated chip, including antenna switch balun, power management converter, so with minimal external circuitry, and includes front-end module, including the entire solution designed to minimize the space occupied by PCB. 
+The system is equipped with ESP8266 manifested leading features are: energy saving VoIP quickly switch between the sleep / wake patterns, with low-power operation adaptive radio bias, front-end signal processing functions, troubleshooting and radio systems coexist characteristics eliminate cellular / Bluetooth / DDR / LVDS / LCD interference.
+</p>
+<h3><span class="mw-headline" id="Characteristics">Characteristics</span></h3>
+<ul>
+<li> 802.11 b / g / n 
+</li>
+<li> Wi-Fi Direct (P2P), soft-AP 
+</li>
+<li> Built-in TCP / IP protocol stack 
+</li>
+<li> Built-in TR switch, balun, LNA, power amplifier and matching network 
+</li>
+<li> Built-in PLL, voltage regulator and power management components 
+</li>
+<li> 802.11b mode + 19.5dBm output power 
+</li>
+<li> Built-in temperature sensor 
+</li>
+<li> Support antenna diversity 
+</li>
+<li> off leakage current is less than 10uA 
+</li>
+<li> Built-in low-power 32-bit CPU: can double as an application processor 
+</li>
+<li> SDIO 2.0, SPI, UART 
+</li>
+<li> STBC, 1x1 MIMO, 2x1 MIMO 
+</li>
+<li> A-MPDU, A-MSDU aggregation and the 0.4 Within wake 
+</li>
+<li> 2ms, connect and transfer data packets 
+</li>
+<li> standby power consumption of less than 1.0mW (DTIM3)
+</li>
+</ul>
+<h3><span class="mw-headline" id="Schema">Schema</span></h3>
+<p><a href="https://nurdspace.nl/File:Esp8266_schema.png" class="image fancybox"><img alt="Esp8266 schema.png" src="./ESP8266 - NURDspace_files/200px-Esp8266_schema.png" width="200" height="109" srcset="/images/thumb/5/58/Esp8266_schema.png/300px-Esp8266_schema.png 1.5x, /images/thumb/5/58/Esp8266_schema.png/400px-Esp8266_schema.png 2x"></a>
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="Ultra-low_power_technology">Ultra-low power technology</span></h3>
+<p>ESP8266 specifically for mobile devices, wearable electronics and networking applications design and make the machine to achieve the lowest energy consumption, together with several other patented technology. This energy-efficient construction in three modes: active mode, sleep mode and deep sleep mode type. 
+When ESP8266 using high-end power management technology and logic systems to reduce non-essential functions of the power conversion regulate sleep patterns and work modes, in sleep mode, it consumes less than the current 12uA, is connected, it consumes less power to 1.0mW (DTIM = 3) or 0.5mW (DTIM = 10). 
+Sleep mode, only calibrated real-time clock and watchdog in working condition. Real-time clock can be programmed to wake ESP8266 within a specific period of time. 
+Through programming, ESP8266 will automatically wake up when detected certain to happen. ESP8266 automatic wake-up in the shortest time, this feature can be applied to the SOC for mobile devices, so before you turn Wi- Fi SOC are in a low-power standby mode. 
+To meet the power requirements of mobile devices and wearable electronics products, ESP8266 at close range when the PA output power can be reduced through software programming to reduce overall power consumption in order to adapt to different applications.
+</p>
+<h4><span class="mw-headline" id="Maximum_integration">Maximum integration</span></h4>
+<p>ESP8266 integrates the most critical components on the board, including power management components, TR switch, RF balun, a peak power of + 25dBm of PA, therefore, ESP8266 only guarantee the lowest BOM cost, and easy to be embedded in any system. 
+ESP8266 BOM is the only external resistors, capacitors, and crystal.
+</p>
+<h3><span class="mw-headline" id="ESP8266_application_subject">ESP8266 application subject</span></h3>
+<ul>
+<li> Smart Power Plug 
+</li>
+<li> Home Automation 
+</li>
+<li> mesh network 
+</li>
+<li> industrial wireless control 
+</li>
+<li> Baby Monitor 
+</li>
+<li> Network Camera 
+</li>
+<li> sensor networks 
+</li>
+<li> wearable electronics 
+</li>
+<li> wireless location-aware devices 
+</li>
+<li> Security ID tag 
+</li>
+<li> wireless positioning system signals
+</li>
+</ul>
+<h3><span class="mw-headline" id="Specifications">Specifications</span></h3>
+<h4><span class="mw-headline" id="Power">Power</span></h4>
+<p>The following data are based on a 3.3V power supply, ambient temperature 25C and use the internal regulator measured. [1] All measurements are made in the absence of the SAW filter, the antenna interface is completed. 
+[2] all transmit data based on 90% duty cycle, continuous transmission mode in the measured.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Mode </th>
+<th> Min </th>
+<th> Typical </th>
+<th> Max </th>
+<th> Units
+</th></tr>
+<tr>
+<td> 802.11b, CCK 1Mbps, POUT=+19.5dBm </td>
+<td> </td>
+<td> 215 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11b, CCK 11Mbps, POUT=+18.5dBm </td>
+<td> </td>
+<td> 197 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11g, OFDM 54Mbps, POUT=+16dBm </td>
+<td> </td>
+<td> 145 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11n, MCS7, POUT =+14dBm </td>
+<td> </td>
+<td> 135 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11b, packet size of 1024 bytes, -80dBm </td>
+<td> </td>
+<td> 60 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11b, packet size of 1024 bytes, -70dBm </td>
+<td> </td>
+<td> 60 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> 802.11b, packet size of 1024 bytes, -65dBm </td>
+<td> </td>
+<td> 62 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> Standby </td>
+<td> </td>
+<td> 0.9 </td>
+<td>  </td>
+<td> uA
+</td></tr>
+<tr>
+<td> Deep sleep </td>
+<td> </td>
+<td> 10 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> Saving mode DTIM 1 </td>
+<td> </td>
+<td> 1.2 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> Saving mode DTIM 3</td>
+<td> </td>
+<td> 0.86 </td>
+<td>  </td>
+<td> mA
+</td></tr>
+<tr>
+<td> Shutdown </td>
+<td> </td>
+<td> 0.5 </td>
+<td>  </td>
+<td> uA
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="RF_specifications">RF specifications</span></h4>
+<p>The following data is at room temperature, the voltage of 3.3V and 1.1V, respectively, when measured
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Description </th>
+<th> Min </th>
+<th> Typical </th>
+<th> Max </th>
+<th> Units
+</th></tr>
+<tr>
+<td> Input Frequency </td>
+<td> 2412 </td>
+<td>  </td>
+<td> 2484  </td>
+<td> MHz
+</td></tr>
+<tr>
+<td> Input resistance </td>
+<td> </td>
+<td> 50  </td>
+<td>  </td>
+<td> Ω
+</td></tr>
+<tr>
+<td> Input reflection </td>
+<td> </td>
+<td>  </td>
+<td> -10  </td>
+<td> dB
+</td></tr>
+<tr>
+<td> At 72.2Mbps, PA output power </td>
+<td> 14 </td>
+<td> 15 </td>
+<td> 16  </td>
+<td> dBm
+</td></tr>
+<tr>
+<td> 11b mode, PA output power </td>
+<td> 17.5 </td>
+<td> 18.5 </td>
+<td> 19.5  </td>
+<td> dBm
+</td></tr>
+<tr>
+<th> Sensitivity </th>
+<th>  </th>
+<th>  </th>
+<th>   </th>
+<th>
+</th></tr>
+<tr>
+<td>CCK, 1Mbps ￼</td>
+<td> </td>
+<td> -98 </td>
+<td> </td>
+<td> dBm
+</td></tr>
+<tr>
+<td>CCK, 11Mbps ￼</td>
+<td> </td>
+<td> -91 </td>
+<td> </td>
+<td> dBm
+</td></tr>
+<tr>
+<td>6Mbps (1/2 BPSK) ￼￼</td>
+<td> </td>
+<td> -93</td>
+<td> </td>
+<td> dBm
+</td></tr>
+<tr>
+<td>54Mbps (3/4 64-QAM) ￼￼</td>
+<td> </td>
+<td> -75 </td>
+<td> </td>
+<td> dBm
+</td></tr>
+<tr>
+<td>HT20, MCS7 (65Mbps, 72.2Mbps) ￼ ￼￼</td>
+<td> </td>
+<td> -71 </td>
+<td> </td>
+<td> dBm
+</td></tr>
+<tr>
+<th> Adjacent suppression </th>
+<th> </th>
+<th> </th>
+<th> </th>
+<th>
+</th></tr>
+<tr>
+<td>OFDM, 6Mbps </td>
+<td> </td>
+<td> 37 </td>
+<td> </td>
+<td> dB
+</td></tr>
+<tr>
+<td>OFDM, 54Mbps </td>
+<td> </td>
+<td> 21 </td>
+<td> </td>
+<td> dB
+</td></tr>
+<tr>
+<td>HT20, MCS0 </td>
+<td> </td>
+<td> 37 </td>
+<td> </td>
+<td> dB
+</td></tr>
+<tr>
+<td>HT20, MCS7 </td>
+<td> </td>
+<td> 20 </td>
+<td> </td>
+<td> dB
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="CPU_and_memory">CPU and memory</span></h3>
+<h4><span class="mw-headline" id="CPU_Interface">CPU Interface</span></h4>
+<p>The chip embedded in an ultra-low-power 32-bit micro-CPU, with 16 compact mode. Can be connected to the CPU via the following interfaces: 
+</p>
+<ul>
+<li> connecting storage controllers can also be used to access external code memory RAM / ROM interface (iBus) 
+</li>
+<li> Also attached storage controller data RAM interface (dBus) 
+</li>
+<li> Access Register of AHB interface 
+</li>
+<li> JTAG debug interface 
+</li>
+</ul>
+<h4><span class="mw-headline" id="Storage_Controller">Storage Controller</span></h4>
+<p>Storage controller contains ROM and SRAM. CPU can iBus, dBus and AHB interface to access the storage controller. Any one of these interfaces can apply for access to ROM or RAM cells, memory arbiter to determine the running order in the order of arrival. 
+</p>
+<h4><span class="mw-headline" id="AHB_and_AHB_module">AHB and AHB module</span></h4>
+<p>AHB module acts as arbiter, through the MAC, and SDIO host CPU control AHB interface. Since sending 
+Address different, AHB data requests may arrive the following two slaves in one: APB module, or  flash memory controller (usually in the case of off-line applications) to the received request is a high speed memory controllers often request, APB module receives register access is often 
+Request. 
+APB module acts as a decoder, but only you can access the ESP8266 main module programmable registers. Since the sending address different, APB request may reach the radio receiver, SI / SPI, hosts SDIO, GPIO, UART, real-time clock (RTC), MAC or digital baseband.
+</p>
+<h4><span class="mw-headline" id="Interface">Interface</span></h4>
+<p>ESP 8266 contains multiple analog and digital interfaces, as follows: 
+</p>
+<h5><span class="mw-headline" id="Main_SI_.2F_SPI_control_.28optional.29">Main SI / SPI control (optional)</span></h5>
+<p>Main Serial Interface (SI) can run at two, three, four-wire bus configuration, is used to control the EEPROM or other I2C / SPI devices. Multiple devices share the two-wire I2C bus. 
+Multiple SPI devices to share the clock and data signals, and according to the chip select, each controlled by software alone GPIO pins. 
+SPI can be used to control external devices, such as serial flash, audio CODEC or other slave devices, installation, effectively giving it three different pins, making it the standard master SPI device. 
+</p>
+<ul>
+<li> SPI_EN0
+</li>
+<li> SPI_EN1
+</li>
+<li> SPI_EN2 
+</li>
+</ul>
+<p>SPI slave is used as the primary interface, giving SPI master and slave SPI support. 
+In the built-in applications, SPI_EN0 is used as an enable signal, the role of external serial flash, download firmware and / or MIB data to baseband. In host-based applications, the firmware and you can choose one MIB data downloaded via the host interface both. This pin is active low when not should be left unconnected. 
+SPI_EN1 often used for user applications, such as controlling the built-in applications or external audio codec sensor ADC. This pin is active low when not should be left unconnected. 
+SPI_EN2 often used to control the EEPROM, storing individual data (individual data), such as MIB information, MAC address, and calibration data, or for general purposes. This pin is active low when not should be left unconnected.
+</p><p><a href="https://nurdspace.nl/File:Esp8266_spi_timing.png" class="image fancybox"><img alt="Esp8266 spi timing.png" src="./ESP8266 - NURDspace_files/200px-Esp8266_spi_timing.png" width="200" height="67" srcset="/images/thumb/d/d0/Esp8266_spi_timing.png/300px-Esp8266_spi_timing.png 1.5x, /images/thumb/d/d0/Esp8266_spi_timing.png/400px-Esp8266_spi_timing.png 2x"></a>
+</p><p><br>
+</p>
+<h5><span class="mw-headline" id="General_Purpose_IO">General Purpose IO</span></h5>
+<p>A total of up to 16 GPIO pins. The firmware can assign them different functions. Each GPIO can be configured internal pullup / pulldown resistors available software registers sampled input, triggering edge or level CPU interrupt input, trigger level wake-up interrupt input, open-drain or complementary push-pull output drivers, software register output source or sigma-delta PWM DAC. 
+These pins are multiplexed with other functions, such as the main interface, UART, SI, Bluetooth co-existence and so on. 
+</p>
+<h5><span class="mw-headline" id="Digital_IO_pins">Digital IO pins</span></h5>
+<p>Digital IO pad is two-way, three states. It includes a three-state control input and output buffers. In addition, for low-power operation, IO can be set to hold state. For example, when we reduce the chip's power consumption, all the output enable signal can be set to maintain a low-power state. 
+Hold function can be selectively implanted IO in need. When the IO help internal and external circuit driving, hold function can be used to hold last state. 
+Hold function to pin introduce some positive feedback. Therefore, the external drive pin must be stronger than the positive feedback. However, the required driving force size is still small, in the 5uA of.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Variables </th>
+<th> Symbol </th>
+<th> Min </th>
+<th> Max </th>
+<th> Units
+</th></tr>
+<tr>
+<td>Input Low Voltage </td>
+<td> Vil </td>
+<td> -0.3 </td>
+<td> 0.25xV10 </td>
+<td> V
+</td></tr>
+<tr>
+<td>Input High Voltage </td>
+<td> Vih </td>
+<td> 0.75xV10 </td>
+<td> 3.6 </td>
+<td> V
+</td></tr>
+<tr>
+<td>Input leakage current </td>
+<td> IIL </td>
+<td> - </td>
+<td> 50 </td>
+<td> nA
+</td></tr>
+<tr>
+<td>Output Low Voltage </td>
+<td> VOL </td>
+<td> - </td>
+<td> 0.1xV10 </td>
+<td> V
+</td></tr>
+<tr>
+<td>Output High Voltage </td>
+<td> VOH </td>
+<td> 0.8xV10 </td>
+<td> - </td>
+<td> V
+</td></tr>
+<tr>
+<td>Input pin capacitance </td>
+<td> Cpad </td>
+<td> - </td>
+<td> 2 </td>
+<td> pF
+</td></tr>
+<tr>
+<td> VDDIO </td>
+<td> V10 </td>
+<td> 1.7 </td>
+<td> 3.6 </td>
+<td> V
+</td></tr>
+<tr>
+<td>Current </td>
+<td> Imax </td>
+<td> - </td>
+<td> 12 </td>
+<td> mA
+</td></tr>
+<tr>
+<td> Temperature </td>
+<td> Tamb </td>
+<td> -20 </td>
+<td> 100 </td>
+<td> C
+</td></tr></tbody></table>
+<p>All digital IO pins must add an overvoltage protection circuit (snap back circuit) between the pin and ground. Usually bounce (snap back) voltage is about 6V, while maintaining the voltage is 5.8V. This prevents excessive voltage and generating ESD. Diodes also avoid reverse voltage output devices.
+</p>
+<h3><span class="mw-headline" id="Firmware_and_software_tools_development_kit">Firmware and software tools development kit</span></h3>
+<p>The firmware running on the ROM and SRAM chip, when the device is awake, firmware via SDIO sector 
+Download the instructions from the host side. 
+Firmware is fully compliant with 802.11 b / g / n / e / i WLAN MAC protocol and Wi-Fi Direct specification only supports basic services unit distributed control function (DCF) under (BSS) operation, but also follow the latest Wi-Fi P2P protocol to support P2P groups operating (P2P group operation). Low level protocol functions automatically run by ESP8266, such as 
+</p>
+<ul>
+<li> RTS / CTS 
+</li>
+<li> Confirm 
+</li>
+<li> fragmentation and reassembly 
+</li>
+<li> polymerization 
+</li>
+<li> frame package (802.11h / <a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc1042">RFC 1042</a>) 
+</li>
+<li> automatic beacon monitoring / scanning 
+</li>
+<li> P2P WiFi direct 
+</li>
+</ul>
+<p>With P2P discovery procedures, passive or active scanning once in the host command start, it will be done automatically. Perform power management, interaction with the host at least, this way, the task of effectively minimized. 
+</p>
+<h4><span class="mw-headline" id="Features">Features</span></h4>
+<p>Laboratory features of the software developer's kit is as follows: 
+</p>
+<ul>
+<li> 802.11 b / g / n / d / e / i / k / r support 
+</li>
+<li> Wi-Fi Direct (P2P) support 
+</li>
+<li> P2P discovery, P2P group master mode (Group Owner mode), P2P Power Management 
+</li>
+<li> Infrastructure Network (Infrastructure BSS) station (Station) mode / P2P mode / SoftAP mold 
+</li>
+<li> hardware accelerator 
+<ul>
+<li> CCMP (CBC-MAC, counting mode)
+</li>
+<li> TKIP (MIC, RC4) o WAPI (SMS4) 
+</li>
+<li> WEP (RC4) 
+</li>
+<li> CRC 
+</li>
+<li> WPA / WPA2 and WPS support 
+</li>
+<li> Other 802.11i security features: 
+</li>
+</ul>
+</li>
+<li> Pre-Certification 
+</li>
+<li> TSN 
+</li>
+</ul>
+<p>Open interfaces  prepared for a variety of upper EAP authentication methods, such as:
+</p>
+<ul>
+<li> TLS 
+</li>
+<li> PEAP 
+</li>
+<li> LEAP 
+</li>
+<li> SIM 
+</li>
+<li> AKA 
+</li>
+<li> 802.11n support (2.4GHz) 
+</li>
+<li> Support MIMO 1x1 and 2x1, STBC, A-MPDU and A-MSDU aggregation, 0.4s guard interval 
+</li>
+<li> WMM saving U-APSD 
+</li>
+<li> use with multi-queue QoS management, in line with 802.11e standard multimedia data traffic optimization methods 
+</li>
+<li> Follow the UMA, and certified by UMA 
+</li>
+<li> 802.1h / RFC1042 frame encapsulation 
+</li>
+<li> hash DMA data transfer operation, the CPU usage to a minimum 
+</li>
+<li> antenna diversity and choice (by software management hardware) 
+</li>
+<li> the clock / power gating and follow the 802.11 standard power management combined, according to the current connection, enter OK dynamically adjusted to achieve the lowest energy consumption 
+</li>
+<li> ratio can be adjusted to set an optimum algorithm for the missing data and the Tx power transfer rate based on the actual SNR and packet 
+</li>
+</ul>
+<p>Rate 
+</p>
+<ul>
+<li> MAC layer automatic retransmission and automatic response, to avoid packet loss occurs when the host is running slow 
+</li>
+<li> seamless roaming support 
+</li>
+<li> Configurable packet traffic arbitration and tailored, based on the slave processor design combining a series of Bluetooth chip vendors to provide flexible and precise time-Bluetooth coexistence support 
+</li>
+<li> support dual / single antenna Bluetooth coexistence with syncing WiFi / Bluetooth capability
+</li>
+</ul>
+<h3><span class="mw-headline" id="Power_Management">Power Management</span></h3>
+<p>Chip can tune into the following states: 
+</p>
+<ul>
+<li> off (OFF): CHIP_PD pin is in a low power state. RTC failure. All registers are emptied. 
+</li>
+<li> deep sleep (DEEP_SLEEP): RTC open, other parts of the chip are closed. RTC internal recovery memory to save the basic WiFi connection information. 
+</li>
+<li> sleep (SLEEP): Only RTC running. Crystal oscillator stops. Any part of the wake (MAC, host, RTC timer, external interrupt) will make the wake of the chip. 
+</li>
+<li> Wake (WAKEUP): In this state, the system from a sleep state to start (PWR) status. Crystal oscillator and PLL are converted enabled state. 
+</li>
+</ul>
+<p>￼￼* on state (ON): High-speed clock can run, 
+And sent to each clock control register is enabled 
+Modules. Each module, including the CPU, including the implementation of relatively low-level clock gating. When the system works, you can WAITI instructions to turn off the CPU's internal clock.
+</p><p><a href="https://nurdspace.nl/File:Esp8266_power_mgmt.png" class="image fancybox"><img alt="Esp8266 power mgmt.png" src="./ESP8266 - NURDspace_files/50px-Esp8266_power_mgmt.png" width="50" height="70" srcset="/images/thumb/c/c3/Esp8266_power_mgmt.png/75px-Esp8266_power_mgmt.png 1.5x, /images/thumb/c/c3/Esp8266_power_mgmt.png/100px-Esp8266_power_mgmt.png 2x"></a>
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="Clock_Management">Clock Management</span></h3>
+<h4><span class="mw-headline" id="High_Frequency_Clock">High Frequency Clock</span></h4>
+<p>ESP8266 on high frequency clock is used to drive two Tx and Rx mixer, which is generated by the internal oscillator and an external oscillator. Crystal frequency between 26MHz to 52MHz float. 
+Although the internal crystal oscillator of the calibration range of the crystal so that the clock generator to meet the conditions, but in general, the crystal quality is still obtained a proper phase noise factors to be considered. When the crystal is used, or because of the frequency offset, rather than the best choice for quality, the maximum capacity of the data processing system and will reduce the sensitivity of the wifi. Please refer to the following instructions to measure the frequency offset.
+</p><p><br>
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Variables </th>
+<th> Symbol </th>
+<th> Min </th>
+<th> Max </th>
+<th> Units
+</th></tr>
+<tr>
+<td>Frequency </td>
+<td> Fxo </td>
+<td> 52 </td>
+<td> MHz
+</td></tr>
+<tr>
+<td>Load capacitance </td>
+<td> Cl </td>
+<td>  </td>
+<td> 32 </td>
+<td> pF
+</td></tr>
+<tr>
+<td>Dynamic capacitance </td>
+<td> Cm </td>
+<td> 2 </td>
+<td> 5 </td>
+<td> pF
+</td></tr>
+<tr>
+<td>Serial resistance </td>
+<td> Rs </td>
+<td> 0 </td>
+<td> 65 </td>
+<td> Ω
+</td></tr>
+<tr>
+<td>Frequency tolerance </td>
+<td> Fxo </td>
+<td> -15 </td>
+<td> 15 </td>
+<td> ppm
+</td></tr>
+<tr>
+<td>Frequency vs Temperature (-25C ~ 75C) </td>
+<td> Fxo,Temp </td>
+<td> -15 </td>
+<td> 15 </td>
+<td> ppm
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="External_Reference_Requirements">External Reference Requirements</span></h4>
+<p>At 26MHz external clock frequency between 52MHz. In order to make a well-functioning radio receiver, the clock will 
+Must have the following characteristics:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Variables </th>
+<th> Symbol </th>
+<th> Min </th>
+<th> Max </th>
+<th> Units
+</th></tr>
+<tr>
+<td>Clock amplitude </td>
+<td> Vxo </td>
+<td> 0.2 </td>
+<td> 1 </td>
+<td> Vpp
+</td></tr>
+<tr>
+<td>External clock accuracy </td>
+<td> Fxo,EXT </td>
+<td>  -15 </td>
+<td> 15 </td>
+<td> ppm
+</td></tr>
+<tr>
+<td>Phase Noise @ 1kHz offset, 40MHz clock </td>
+<td> </td>
+<td>  </td>
+<td> -120 </td>
+<td> dBc/Hz
+</td></tr>
+<tr>
+<td>Phase Noise @ 10kHz offset, 40MHz clock </td>
+<td> </td>
+<td>  </td>
+<td> -130 </td>
+<td> dBc/Hz
+</td></tr>
+<tr>
+<td>Phase Noise @ 100kHz offset, 40MHz clock </td>
+<td> </td>
+<td> </td>
+<td> -138 </td>
+<td> dBc/Hz
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Radio_receivers">Radio receivers</span></h3>
+<p>ESP8266 radio receiver mainly includes the following modules: 
+</p>
+<ul>
+<li> 2.4GHz receiver 
+</li>
+<li> 2.4GHz transmitter 
+</li>
+<li> High-speed clock generator and crystal oscillator 
+</li>
+<li> Real-time clock 
+</li>
+<li> bias and regulators 
+</li>
+<li> Power Management 
+</li>
+</ul>
+<h4><span class="mw-headline" id="Channel_Frequency">Channel Frequency</span></h4>
+<p>According IEEE802.11bgn standard, RF transceiver supports the following channels:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th> Channel </th>
+<th> Freq. </th>
+<th> Channel </th>
+<th> Freq.
+</th></tr>
+<tr>
+<td>1 </td>
+<td> 2412 </td>
+<td> 8 </td>
+<td> 2447
+</td></tr>
+<tr>
+<td>2 </td>
+<td> 2417 </td>
+<td> 9 </td>
+<td> 2452
+</td></tr>
+<tr>
+<td>3 </td>
+<td> 2422 </td>
+<td> 10 </td>
+<td> 2457
+</td></tr>
+<tr>
+<td>4 </td>
+<td> 2427 </td>
+<td> 11 </td>
+<td> 2462
+</td></tr>
+<tr>
+<td>5 </td>
+<td> 2432 </td>
+<td> 12 </td>
+<td> 2467
+</td></tr>
+<tr>
+<td>6 </td>
+<td> 2437 </td>
+<td> 13 </td>
+<td> 2472
+</td></tr>
+<tr>
+<td>7 </td>
+<td> 2442 </td>
+<td> 14 </td>
+<td> 2484
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="2.4GHz_receiver">2.4GHz receiver</span></h4>
+<p>2.4GHz RF signal receiver down into quadrature baseband signal, with two high-resolution, high-speed ADC and the latter into a digital signal. In order to accommodate different signal channels, a radio receiver integrated RF filters, automatic gain control (AGC), DC offset compensation circuit and a baseband filter.
+</p>
+<h4><span class="mw-headline" id="2.4GHz_transmitter">2.4GHz transmitter</span></h4>
+<p>2.4 GHz transmitter orthogonal frequency baseband signals up to 2.4GHz, using high-power CMOS power amplifier to drive the antenna. Further use of the digital calibration improves the linearity of the power amplifier to achieve the average power of + 19dBm in 802.11b transmission, the transmission reaches + 16dBm 802.11n average power, features super. 
+To offset defects in the radio receiver is also calibrated by other measures such as: 
+</p>
+<ul>
+<li> carrier leakage 
+</li>
+<li> I / Q phase matching, and 
+</li>
+<li> baseband nonlinear 
+</li>
+</ul>
+<p>This will reduce the time and equipment required for testing.
+</p>
+<h4><span class="mw-headline" id="Clock_generator">Clock generator</span></h4>
+<p>The clock generator generates the receiver and transmitter 2.4GHz clock signal all of its components are integrated on the chip, 
+Include: 
+</p>
+<ul>
+<li> inductor 
+</li>
+<li> varactor 
+</li>
+<li> closed-loop filter 
+</li>
+</ul>
+<p>Clock generator contains a built-in calibration circuit and self-test circuitry. Clock phase and quadrature phase noise through the optimal calibration algorithm processing patent on the chip, in order to ensure that the receiver and transmitter to achieve the best performance.
+</p>
+<h2><span class="mw-headline" id="AT_Commands">AT Commands</span></h2>
+<ul>
+<li> Tnx to <a rel="nofollow" class="external free" href="http://www.electrodragon.com/w/Wi07c">http://www.electrodragon.com/w/Wi07c</a>
+</li>
+</ul>
+<h3><span class="mw-headline" id="Format">Format</span></h3>
+<ul>
+<li> Baud rate at 57600
+</li>
+<li> x is the commands
+</li>
+</ul>
+<table class="wikitable sortable jquery-tablesorter">
+
+<thead><tr>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Set </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Inquiry </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Test </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Execute
+</th></tr></thead><tbody>
+<tr>
+<td> AT+&lt;x&gt;=&lt;…&gt; </td>
+<td> AT+&lt;x&gt;? </td>
+<td> AT+&lt;x&gt;=? </td>
+<td> AT+&lt;x&gt;
+</td></tr>
+<tr>
+<td> AT+CWMODE=&lt;mode&gt; </td>
+<td> AT+CWMODE? </td>
+<td> AT+CWMODE=? </td>
+<td> -
+</td></tr>
+<tr>
+<td> Set the network mode </td>
+<td> Check current mode </td>
+<td> Return which modes supported </td>
+<td> -
+</td></tr></tbody><tfoot></tfoot></table>
+<h3><span class="mw-headline" id="Commands">Commands</span></h3>
+<ul>
+<li> carefully there are must be no any spaces between the " and IP address or port
+</li>
+</ul>
+<table class="wikitable sortable jquery-tablesorter">
+
+<thead><tr>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Commands  </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Description  </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Type </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Set/Execute </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Inquiry </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> test </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Parameters </th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"> Examples
+</th></tr></thead><tbody>
+<tr>
+<td> AT+RST </td>
+<td> restart the module </td>
+<td> basic </td>
+<td> - </td>
+<td> - </td>
+<td> - </td>
+<td> -
+</td></tr>
+<tr>
+<td>  AT+CWMODE </td>
+<td> wifi mode </td>
+<td> wifi </td>
+<td> AT+CWMODE=&lt;mode&gt;</td>
+<td> AT+CWMODE? </td>
+<td> AT+CWMODE=? </td>
+<td> 1= Sta, 2= AP, 3=both
+</td></tr>
+<tr>
+<td> AT+CWJAP </td>
+<td> join the AP </td>
+<td> wifi </td>
+<td> AT+ CWJAP =&lt;ssid&gt;,&lt; pwd &gt; </td>
+<td> AT+ CWJAP? </td>
+<td> - </td>
+<td> ssid = ssid, pwd = wifi password
+</td></tr>
+<tr>
+<td>  AT+CWLAP </td>
+<td> list the AP </td>
+<td> wifi </td>
+<td> AT+CWLAP </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td>  AT+CWQAP </td>
+<td> quit the AP </td>
+<td> wifi </td>
+<td> AT+CWQAP </td>
+<td> - </td>
+<td> AT+CWQAP=? </td>
+<td>
+</td></tr>
+<tr>
+<td> AT+ CWSAP </td>
+<td> set the parameters of AP </td>
+<td> wifi </td>
+<td> AT+ CWSAP= &lt;ssid&gt;,&lt;pwd&gt;,&lt;chl&gt;, &lt;ecn&gt; </td>
+<td>  AT+ CWSAP? </td>
+<td> </td>
+<td> ssid, pwd, chl = channel, ecn = encryption </td>
+<td> Connect to your router: ：AT+CWJAP="YOURSSID","helloworld"; and check if connected: AT+CWJAP?
+</td></tr>
+<tr>
+<td> AT+ CIPSTATUS </td>
+<td> get the connection status </td>
+<td> TCP/IP </td>
+<td> AT+ CIPSTATUS </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> AT+CIPSTART </td>
+<td> set up TCP or UDP connection </td>
+<td> TCP/IP </td>
+<td> 1)single connection (+CIPMUX=0) AT+CIPSTART= &lt;type&gt;,&lt;addr&gt;,&lt;port&gt;; 2) multiple connection (+CIPMUX=1) AT+CIPSTART= &lt;id&gt;&lt;type&gt;,&lt;addr&gt;, &lt;port&gt; </td>
+<td> - </td>
+<td> AT+CIPSTART=? </td>
+<td> id = 0-4, type = TCP/UDP, addr = IP address, port= port </td>
+<td> Connect to another TCP server, set multiple connection first: AT+CIPMUX=1; connect:  AT+CIPSTART=4,"TCP","X1.X2.X3.X4",9999
+</td></tr>
+<tr>
+<td> AT+CIPSEND </td>
+<td> send data </td>
+<td> TCP/IP </td>
+<td> 1)single connection(+CIPMUX=0) AT+CIPSEND=&lt;length&gt;; 2) multiple connection (+CIPMUX=1) AT+CIPSEND= &lt;id&gt;,&lt;length&gt; </td>
+<td> </td>
+<td> AT+CIPSEND=?  </td>
+<td> </td>
+<td> send data: AT+CIPSEND=4,15 and then enter the data
+</td></tr>
+<tr>
+<td> AT+CIPCLOSE </td>
+<td> close TCP or UDP connection </td>
+<td> TCP/IP </td>
+<td> AT+CIPCLOSE=&lt;id&gt; or AT+CIPCLOSE </td>
+<td> </td>
+<td> AT+CIPCLOSE=? </td>
+<td>
+</td></tr>
+<tr>
+<td> AT+CIFSR </td>
+<td> Get IP address </td>
+<td> TCP/IP </td>
+<td> AT+CIFSR </td>
+<td> </td>
+<td> AT+ CIFSR=? </td>
+<td>
+</td></tr>
+<tr>
+<td> AT+ CIPMUX </td>
+<td> set mutiple connection </td>
+<td> TCP/IP </td>
+<td> AT+ CIPMUX=&lt;mode&gt; </td>
+<td> AT+ CIPMUX? </td>
+<td> </td>
+<td> 0 for single connection 1 for mutiple connection
+</td></tr>
+<tr>
+<td>  AT+ CIPSERVER </td>
+<td> set as server </td>
+<td> TCP/IP </td>
+<td> AT+ CIPSERVER= &lt;mode&gt;[,&lt;port&gt; ] </td>
+<td> </td>
+<td> </td>
+<td> mode 0 to close server mode, mode 1 to open; port = port </td>
+<td> turn on as a TCP server:  AT+CIPSERVER=1,8888, check the self server IP address: AT+CIFSR=?
+</td></tr>
+<tr>
+<td> +IPD </td>
+<td> received data </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr></tbody><tfoot></tfoot></table>
+<h2><span class="mw-headline" id="Pin_Definition">Pin Definition</span></h2>
+<p><b>There are multiple versions of the model, check the source where you bought the module.</b>
+</p>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="https://nurdspace.nl/File:ESP8266_interface.jpg" class="image fancybox" rel="group"><img alt="" src="./ESP8266 - NURDspace_files/65px-ESP8266_interface.jpg" width="65" height="120"></a></div></div>
+			<div class="gallerytext">
+<p>Module version 1
+</p>
+			</div>
+		</div></li>
+</ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.094 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 245/1000000
+Preprocessor generated node count: 671/1000000
+Post‐expand include size: 1337/2097152 bytes
+Template argument size: 159/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 1/100
+-->
+
+<!-- Saved in parser cache with key nurds_nurdspace:pcache:idhash:941-0!*!0!!en!2!* and timestamp 20181205171710 and revision id 5231
+ -->
+</div><div class="printfooter">
+Retrieved from "<a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;oldid=5231">https://nurdspace.nl/index.php5?title=ESP8266&amp;oldid=5231</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://nurdspace.nl/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://nurdspace.nl/Category:Projects" title="Category:Projects">Projects</a></li></ul></div></div>			<!-- end content -->
+			<div id="mw-data-after-content">
+	<table width="100%">
+<tbody><tr><td colspan="2">&nbsp;</td></tr>
+<tr class="gumax-p-navigation-spacer">
+<td>
+<div class="floatleft" style="margin-top: 20px;  font-size: .7em;">Our site is hosted by Site4U<br><a href="http://www.site4u.nl/" title="Site4U"><img alt="Site4U" src="./ESP8266 - NURDspace_files/Site4u.logo.png"></a></div>
+</td><td>
+<div class="floatright" style="margin-top: 20px;  font-size: .7em;">Part of our connectivity is made available by BIT<br><a href="http://www.bit.nl/vacatures" title="To BIT&#39;s joboffers"><img alt="To BIT&#39;s joboffers" src="./ESP8266 - NURDspace_files/100px-Bitlogo.png" width="100" height="51"></a></div>
+</td></tr>
+</tbody></table>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31398008-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+		</td></tr></tbody></table>
+
+		<!-- ///// gumax-footer ///// -->
+		<div id="gumax-footer">
+				<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Tools</h5>
+		<ul>
+				<li id="t-whatlinkshere"><a href="https://nurdspace.nl/Special:WhatLinksHere/ESP8266">What links here</a></li>
+				<li>/</li>
+				<li id="t-recentchangeslinked"><a href="https://nurdspace.nl/Special:RecentChangesLinked/ESP8266">Related changes</a></li>
+				<li>/</li>
+<li id="t-specialpages"><a href="https://nurdspace.nl/Special:SpecialPages">Special pages</a></li>
+				<li>/</li>
+				<li id="t-print"><a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;printable=yes">Printable version</a></li>				<li>/</li>
+				<li id="t-permalink"><a href="https://nurdspace.nl/index.php5?title=ESP8266&amp;oldid=5231">Permanent link</a></li>		</ul>
+	</div>
+	<!-- end of personal tools  -->
+			<div class="gumax-footer-spacer"></div>
+				<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="https://nurdspace.nl/NURDspace:Privacy_policy" title="NURDspace:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="https://nurdspace.nl/NURDspace:About" title="NURDspace:About">About NURDspace</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="https://nurdspace.nl/NURDspace:General_disclaimer" title="NURDspace:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>/</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+		</div>
+		<!-- ///// end of gumax-footer ///// -->
+
+	</div>
+	<!-- ///// end of gumax-body ///// -->
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="./ESP8266 - NURDspace_files/blank.gif" alt=""></td></tr></tbody></table>
+	<!--[if lt IE 7]> <script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script> <![endif]-->
+	<!--[if lt IE 7]> <script type="text/javascript">pngfix('td');</script> <![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.tooltips","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.FancyBoxThumbs"],null,true);
+}</script>
+<script>
+var fbtFancyBoxOptions = {};
+</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":69});
+}</script>
+
+
+
+
+
+<div class="suggestions" style="display: none; font-size: 8.8704px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
