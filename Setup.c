@@ -31,7 +31,7 @@ void TimerSetup()                       		// Subject to change
     TA1CCR2 = 0x00FF;
 }
 
-void BoardSetup{
+void BoardSetup(){
 	//From exmple
 	P1DIR |= BIT0;                         	   // Set P1.0 to output direction
 	P1IE |=  BIT3;                         	   // P1.3 interrupt enabled

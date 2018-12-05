@@ -12,7 +12,7 @@ int main(void){
  
  TimerSetup(); //Setup Timers
  
- 
+ BoardSetup(); //Setup the board
 }
 
 
