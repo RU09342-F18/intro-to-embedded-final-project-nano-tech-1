@@ -33,6 +33,8 @@ void TimerSetup()                       		// Subject to change
 }
 
 void BoardSetup(){
+    WDTCTL = WDTPW + WDTHOLD;                 // Stop watchdog timer
+
 	//From example
 	P1DIR |= BIT0;                         	   // Set P1.0 to output direction
 	P1IE |=  BIT3;                         	   // P1.3 interrupt enabled

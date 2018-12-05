@@ -2,29 +2,35 @@
 #include <msp430g2553.h>
 #include <Setup.h>
 //Functions
-void MotionSensor();	
+void MotionSensor();
 
 
 int main(void){
- 
- 
+
+
  UARTSetup(); //Setup UART
- 
+
  TimerSetup(); //Setup Timers
- 
+
  BoardSetup(); //Setup the board
+
+ __bis_SR_register(GIE); //Enable interrupts
+ while(1){
+     return(0);
+ }
 }
 
 
 void MotionSensor(){
-	
+
 }
 
 
 
-//--------------------Interupts--------------------
+//--------------------Interrupts--------------------
 
 //This should be a working interupt for port 1.3
+
 #pragma vector=PORT1_VECTOR
 __interrupt void Port_1(void)
 
