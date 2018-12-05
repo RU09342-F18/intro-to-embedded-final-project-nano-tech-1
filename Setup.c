@@ -1,5 +1,6 @@
 #include <msp430g2553.h>
 #include "Setup.h"
+#include <msp430.h>
 
 /*void UARTSetup()								// Code from Lab 0 example code
 {
