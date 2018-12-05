@@ -1,5 +1,5 @@
 //Includes
-#include <msp430.h>
+#include <msp430g2553.h>
 #include <Setup.h>
 //Functions
 void MotionSensor();	
