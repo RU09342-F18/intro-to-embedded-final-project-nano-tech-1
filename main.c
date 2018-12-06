@@ -29,7 +29,7 @@ void MotionSensor(){
 
 //--------------------Interrupts--------------------
 
-//This should be a working interupt for port 1.3
+//This should be a working interrupt for port 1.3
 
 #pragma vector=PORT1_VECTOR
 __interrupt void Port_1(void)
