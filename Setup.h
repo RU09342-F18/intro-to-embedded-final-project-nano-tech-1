@@ -14,5 +14,7 @@ void TimerSetup();
 
 void BoardSetup();
 
+void LEDSetup();
+
 
 #endif /* Setup_H_ */
