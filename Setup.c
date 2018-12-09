@@ -44,6 +44,10 @@ void TimerSetup()                       		  // Subject to change
 
 void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
+//Buzzer - P1.0 - Can be changed
+  P1DIR |= BIT0;
+  P1SEL |= BIT0;
+
 
 	//From example
 	P1DIR |= BIT0;                         	    // Set P1.0 to output direction
@@ -57,12 +61,10 @@ void BoardSetup(){
 }
 
 void LEDSetup(){
-
+//Blinking LED - P1.6 - Can not be changed
   P1DIR |= GREEN;
   P1SEL |= GREEN;
 
-  P1DIR |= BIT0;
-  P1SEL |= BIT0;
 
   P2DIR |= BIT6;
   P2SEL |= BIT6;
