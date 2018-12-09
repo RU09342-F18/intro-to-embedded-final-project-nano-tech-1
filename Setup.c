@@ -1,6 +1,6 @@
 #include "Setup.h"
 #include <msp430.h>
-
+#define GREEN BIT6              // P1.6
 void UARTSetup()								              // Code from Lab 0 example code
 {
   DCOCTL = 0;                            		  // Select lowest DCOx and MODx settings
@@ -21,12 +21,12 @@ void TimerSetup()                       		  // Subject to change
   TA0CTL |= TASSEL_2 + MC_1;                  // Select clock source to SMCLK and to up mode
   
   // Set capture/compare 1 to 128
-  TA0CCR0 = 256;
-  TA0CCR1 = 1;
+  TA0CCR0 = 60000;
+  TA0CCR1 = 12700;
 
   TA0CCTL1 |= OUTMOD_3;					              
 
-  TA1CTL = TASSEL_2 + MC_1 + ID_0;            // SMCLK divided by 1, Up
+  TA1CTL = TASSEL_1 + MC_1 + ID_0;            // SMCLK divided by 1, Up
   TA1CCR0  = 0x00FF;                          // Sets CCR0 to 255
   TA1CCTL1 = OUTMOD_7;                        // Reset or Set behavior
   TA1CCTL2 = OUTMOD_7;                        // Reset or Set behavior
