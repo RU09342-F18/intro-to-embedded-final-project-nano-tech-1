@@ -5,7 +5,7 @@
 void MotionSensor();
 void SoundSensor();
 
-#define GREEN BIT6              // P1.6
+#define RED BIT6              // P1.6
 
 
 int main(void){
