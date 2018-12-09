@@ -5,6 +5,7 @@
 void MotionSensor();
 void SoundSensor();
 
+<<<<<<< HEAD
 
 #define GREEN BIT6              // P1.6
 
@@ -12,6 +13,12 @@ void SoundSensor();
 int main(void){
 
   WDTCTL = WDTPW | WDTHOLD;			// stop watchdog timer
+=======
+#define RED BIT6              // P1.6
+
+
+int main(void){              	
+>>>>>>> fbff87898024f45f782cc31bda4e68982374e5a9
 
   BoardSetup();               // Setup the board
 
@@ -20,8 +27,6 @@ int main(void){
   LEDSetup();                   // Setup for LEDs
 
   TimerSetup();                 // Setup Timers
-
-
 
   __bis_SR_register(GIE);       // Enable interrupts
   

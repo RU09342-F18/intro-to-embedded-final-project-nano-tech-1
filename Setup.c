@@ -1,6 +1,6 @@
 #include "Setup.h"
 #include <msp430.h>
-#define GREEN BIT6              // P1.6
+#define RED BIT6              // P1.6
 void UARTSetup()								              // Code from Lab 0 example code
 {
   DCOCTL = 0;                            		  // Select lowest DCOx and MODx settings
@@ -18,11 +18,11 @@ void UARTSetup()								              // Code from Lab 0 example code
 
 void TimerSetup()                       		  // Subject to change
 {
-//RED LED and Buzzer
+  //RED LED and Buzzer
   TA0CTL |= TASSEL_2 + MC_1 + ID_3;                  // Select clock source to SMCLK and to up mode
   TA0CCTL1 |= OUTMOD_7;
   TA0CCR0 = 60000;
-  TA0CCR1 = 12700;
+  TA0CCR1 = 9000;
   //Buzzer
   TA0CCR2 = 5;
 
@@ -30,9 +30,15 @@ void TimerSetup()                       		  // Subject to change
 
 void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
+<<<<<<< HEAD
 //Buzzer - P1.0 - Can be changed
 
-
+=======
+  
+  //Buzzer - P1.0 - Can be changed
+  P1DIR |= BIT0;
+  P1SEL |= BIT0;
+>>>>>>> fbff87898024f45f782cc31bda4e68982374e5a9
 
 	//From example
 	P1DIR |= BIT0;                         	    // Set P1.0 to output direction
@@ -49,11 +55,17 @@ void BoardSetup(){
 }
 
 void LEDSetup(){
+<<<<<<< HEAD
 //Blinking LED - P1.6 - Can not be changed
   P1DIR |= GREEN;
   P1SEL |= GREEN;
 
 
+=======
+  //Blinking LED - P1.6 - Can not be changed
+  P1DIR |= RED;
+  P1SEL |= RED;
+>>>>>>> fbff87898024f45f782cc31bda4e68982374e5a9
 }
 
 
