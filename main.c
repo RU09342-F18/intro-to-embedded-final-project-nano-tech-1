@@ -3,6 +3,7 @@
 #include <Setup.h>
 //Functions
 void MotionSensor();
+void SoundSensor();
 
 
 int main(void){
@@ -22,12 +23,12 @@ int main(void){
 
 
 void MotionSensor(){
-
+	//We have detected motion
 }
 
 void SoundSensor(){
 	//We have detected sound
-	//
+	
 }
 
 
