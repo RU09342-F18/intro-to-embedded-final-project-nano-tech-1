@@ -13,13 +13,15 @@ int main(void){
   WDTCTL = WDTPW | WDTHOLD;			// stop watchdog timer
 	P1DIR |= BIT6;              	
 
+	BoardSetup();               // Setup the board
+
   UARTSetup();                  // Setup UART
 
   LEDSetup();                   // Setup for LEDs
 
   TimerSetup();                 // Setup Timers
 
-  BoardSetup();                 // Setup the board
+
 
   __bis_SR_register(GIE);       // Enable interrupts
   
@@ -55,6 +57,17 @@ __interrupt void Port_1(void)
   This interrupt should fire when the morion sensor sees something
   When the motion sensor sees something the buzzer should go off and the LED should blink
   */
+}
+
+#pragma vector=TIMER0_A2_VECTOR
+__interrupt void Timer_A2 (void)
+{
+
+
+    P1OUT ^= BIT0;                            // P1.0 = toggle
+    //P1IFG &= ~BIT3; // P1.3 IFG cleared
+    TA0CCR2 = TA0CCR2 + 5;
+
 }
 
 
