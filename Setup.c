@@ -18,28 +18,13 @@ void UARTSetup()								              // Code from Lab 0 example code
 
 void TimerSetup()                       		  // Subject to change
 {
-
+//RED LED and Buzzer
   TA0CTL |= TASSEL_2 + MC_1 + ID_3;                  // Select clock source to SMCLK and to up mode
-  
-  // Set capture/compare 1 to 128
-  TA0CCR0 = 60000;
-  TA0CCR1 = 30000;
-
   TA0CCTL1 |= OUTMOD_7;
-
-
-    // Set capture/compare 1 to 128
-    TA0CCR0 = 60000;
-    TA0CCR1 = 12700;
-    TA0CCR2 = 5;
-
-    TA0CCTL1 |= OUTMOD_3;
-
-
-    TA1CTL |= TASSEL_2 + MC_1;
-    TA1CCR0 = 60000;
-    TA1CCR1 = 12700;
-    TA1CCTL1 = OUTMOD_3;
+  TA0CCR0 = 60000;
+  TA0CCR1 = 12700;
+  //Buzzer
+  TA0CCR2 = 5;
 }
 
 void BoardSetup(){
@@ -64,10 +49,6 @@ void LEDSetup(){
 //Blinking LED - P1.6 - Can not be changed
   P1DIR |= GREEN;
   P1SEL |= GREEN;
-
-
-  P2DIR |= BIT6;
-  P2SEL |= BIT6;
 }
 
 
