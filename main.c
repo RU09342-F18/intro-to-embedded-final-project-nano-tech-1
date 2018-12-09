@@ -25,6 +25,11 @@ void MotionSensor(){
 
 }
 
+void SoundSensor(){
+	//We have detected sound
+	//
+}
+
 
 
 //--------------------Interrupts--------------------
