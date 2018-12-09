@@ -18,21 +18,20 @@ void UARTSetup()								              // Code from Lab 0 example code
 
 void TimerSetup()                       		  // Subject to change
 {
-  TA0CTL |= TASSEL_2 + MC_1;                  // Select clock source to SMCLK and to up mode
-  
-  // Set capture/compare 1 to 128
-  TA0CCR0 = 60000;
-  TA0CCR1 = 12700;
 
-  TA0CCTL1 |= OUTMOD_3;					              
+    TA0CTL |= TASSEL_2 + MC_1;                  // Select clock source to SMCLK and to up mode
 
-  TA1CTL = TASSEL_1 + MC_1 + ID_0;            // SMCLK divided by 1, Up
-  TA1CCR0  = 0x00FF;                          // Sets CCR0 to 255
-  TA1CCTL1 = OUTMOD_7;                        // Reset or Set behavior
-  TA1CCTL2 = OUTMOD_7;                        // Reset or Set behavior
+    // Set capture/compare 1 to 128
+    TA0CCR0 = 60000;
+    TA0CCR1 = 12700;
 
-  TA1CCR1 = 0x00FF;
-  TA1CCR2 = 0x00FF;
+    TA0CCTL1 |= OUTMOD_3;
+
+
+    TA1CTL |= TASSEL_2 + MC_1;
+    TA1CCR0 = 60000;
+    TA1CCR1 = 12700;
+    TA1CCTL1 = OUTMOD_3;
 }
 
 void BoardSetup(){
@@ -50,16 +49,12 @@ void BoardSetup(){
 }
 
 void LEDSetup(){
-  /*P1DIR |= RedLED;                            // P1.6 to output
-  P1SEL |= RedLED;                            // P1.6 to TA0.1
-  P1SEL2 |= ~RedLED;
-  P2DIR |= GreenLED;                          // P2.1 to output
-  P2SEL |= GreenLED;                          // P2.1 to TA0.2
-  P2SEL2 &= ~GreenLED;
-  P2SEL2 &= ~BlueLED;
-  */
+
   P1DIR |= GREEN;
   P1SEL |= GREEN;
+
+  P2DIR |= BIT6;
+  P2SEL |= BIT6;
 }
 
 
