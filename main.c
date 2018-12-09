@@ -5,20 +5,27 @@
 void MotionSensor();
 void SoundSensor();
 
+#define GREEN BIT6              // P1.6
+
 
 int main(void){
 
+  WDTCTL = WDTPW | WDTHOLD;			// stop watchdog timer
+	P1DIR |= BIT6;              	
 
- UARTSetup(); //Setup UART
+  UARTSetup();                  // Setup UART
 
- TimerSetup(); //Setup Timers
+  LEDSetup();                   // Setup for LEDs
 
- BoardSetup(); //Setup the board
+  TimerSetup();                 // Setup Timers
 
- __bis_SR_register(GIE); //Enable interrupts
- while(1){
-     return(0);
- }
+  BoardSetup();                 // Setup the board
+
+  __bis_SR_register(GIE);       // Enable interrupts
+  
+  while(1){
+      return(0);
+  }
 }
 
 
@@ -49,3 +56,5 @@ __interrupt void Port_1(void)
   When the motion sensor sees something the buzzer should go off and the LED should blink
   */
 }
+
+
