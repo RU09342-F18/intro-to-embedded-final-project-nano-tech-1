@@ -18,8 +18,18 @@ void UARTSetup()								              // Code from Lab 0 example code
 
 void TimerSetup()                       		  // Subject to change
 {
+<<<<<<< HEAD
 
     TA0CTL |= TASSEL_2 + MC_1;                  // Select clock source to SMCLK and to up mode
+=======
+  TA0CTL |= TASSEL_2 + MC_1 + ID_3;                  // Select clock source to SMCLK and to up mode
+  
+  // Set capture/compare 1 to 128
+  TA0CCR0 = 60000;
+  TA0CCR1 = 30000;
+
+  TA0CCTL1 |= OUTMOD_7;
+>>>>>>> 1caecf607a1f4b3d42593c863774aaf2107e5a20
 
     // Set capture/compare 1 to 128
     TA0CCR0 = 60000;
