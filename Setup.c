@@ -22,17 +22,17 @@ void TimerSetup()                       		  // Subject to change
   TA0CTL |= TASSEL_2 + MC_1 + ID_3;                  // Select clock source to SMCLK and to up mode
   TA0CCTL1 |= OUTMOD_7;
   TA0CCR0 = 60000;
-  TA0CCR1 = 12700;
+  TA0CCR1 = 9000;
   //Buzzer
   TA0CCR2 = 5;
 }
 
 void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
-//Buzzer - P1.0 - Can be changed
+  
+  //Buzzer - P1.0 - Can be changed
   P1DIR |= BIT0;
   P1SEL |= BIT0;
-
 
 	//From example
 	P1DIR |= BIT0;                         	    // Set P1.0 to output direction
@@ -46,7 +46,7 @@ void BoardSetup(){
 }
 
 void LEDSetup(){
-//Blinking LED - P1.6 - Can not be changed
+  //Blinking LED - P1.6 - Can not be changed
   P1DIR |= RED;
   P1SEL |= RED;
 }

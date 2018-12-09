@@ -8,10 +8,7 @@ void SoundSensor();
 #define RED BIT6              // P1.6
 
 
-int main(void){
-
-  WDTCTL = WDTPW | WDTHOLD;			// stop watchdog timer
-	P1DIR |= BIT6;              	
+int main(void){              	
 
 	BoardSetup();               // Setup the board
 
@@ -20,8 +17,6 @@ int main(void){
   LEDSetup();                   // Setup for LEDs
 
   TimerSetup();                 // Setup Timers
-
-
 
   __bis_SR_register(GIE);       // Enable interrupts
   
