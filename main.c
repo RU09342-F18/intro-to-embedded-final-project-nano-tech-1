@@ -61,12 +61,11 @@ __interrupt void Port_1(void)
 
 #pragma vector=TIMER0_A2_VECTOR
 __interrupt void Timer_A2 (void)
-{
+{//This is used to make the buzzer make noise
 
 
     P1OUT ^= BIT0;                            // P1.0 = toggle
-    //P1IFG &= ~BIT3; // P1.3 IFG cleared
-    TA0CCR2 = TA0CCR2 + 5;
+    TA0CCR2 = TA0CCR2 + 5;                    //Roll the CCR value forward so it toggles again.
 
 }
 
