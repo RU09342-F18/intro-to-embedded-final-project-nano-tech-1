@@ -1,12 +1,18 @@
 //Includes
 #include <msp430.h>
 #include <Setup.h>
+//Definition
+typedef int bool;
+#define true 1
+#define false 0
+
+#define RED BIT6              // P1.6
 //Functions
 void MotionSensor();
 void SoundSensor();
 
 
-#define RED BIT6              // P1.6
+
 
 
 int main(void){              	
