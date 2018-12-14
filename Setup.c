@@ -1,6 +1,8 @@
 #include "Setup.h"
 #include <msp430.h>
+
 #define RED BIT6              // P1.6
+
 void UARTSetup()								              // Code from Lab 0 example code
 {
   DCOCTL = 0;                            		  // Select lowest DCOx and MODx settings
@@ -19,7 +21,7 @@ void UARTSetup()								              // Code from Lab 0 example code
 void TimerSetup()                       		  // Subject to change
 {
   //RED LED and Buzzer
-  TA0CTL |= TASSEL_2 + MC_1 + ID_3;                  // Select clock source to SMCLK and to up mode
+  TA0CTL |= TASSEL_2 + MC_1 + ID_3;           // Select clock source to SMCLK and to up mode
   TA0CCTL1 |= OUTMOD_7;
   TA0CCR0 = 60000;
   TA0CCR1 = 9000;
@@ -31,31 +33,41 @@ void TimerSetup()                       		  // Subject to change
 void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
 
-//Buzzer - P1.0 - Can be changed
-
-
+  //Buzzer - P1.0 - Can be changed
 	//From example
-	P1DIR |= BIT0;                         	    // Set P1.0 to output direction
+	/*P1DIR |= BIT0;                         	    // Set P1.0 to output direction
+  P1SEL |= BIT0;
+  */
 
+  // GREEN LED toggles each time interrupt is fired
+  P1DIR |= BIT0;                            // Set P1.0 to output direction
+  P1IE |=  BIT3;                            // P1.3 interrupt enabled
+  P1IES |= BIT3;                            // P1.3 Hi/lo edge
+  P1REN |= BIT3;							              // Enable Pull Up
+  P1IFG &= ~BIT3;                           // P1.3 IFG cleared
 
-	P1IE |=  BIT3;                         	    // P1.3 interrupt enabled
+  // RED LED toggles each time interrupt is fired
+  P2DIR |= BIT0;                            // Set P2.0 to output direction
+  P1IE |=  BIT4;                            // P1.4 interrupt enabled
+  P1IES |= BIT4;                            // P1.4 Hi/lo edge
+  P1REN |= BIT4;							              // Enable Pull Up
+  P1IFG &= ~BIT4;                           // P1.4 IFG cleared
+
+   
+
+	/*P1IE |=  BIT3;                         	    // P1.3 interrupt enabled
 	P1IES |= BIT3;                         	    // P1.3 Hi/lo edge
-	P1REN |= BIT3;								// Enable Pull Up on SW2 (P1.3)
+	P1REN |= BIT3;								              // Enable Pull Up on SW2 (P1.3)
 	P1IFG |= ~BIT3;                       	    // P1.3 IFG cleared
 	
 	//test code for multiple interrupts
-	  P1REN |= 0x10;                            // P1.4 pullup
-	  P1IE |= 0x10;                             // P1.4 interrupt enabled
-	  P1IES |= 0x10;                            // P1.4 Hi/lo edge
-	  P1IFG |= ~0x10;                           // P1.4 IFG cleared
-
-	  P1DIR |= BIT1;
+  P1REN |= 0x10;                            // P1.4 pullup
+  P1IE |= 0x10;                             // P1.4 interrupt enabled
+  P1IES |= 0x10;                            // P1.4 Hi/lo edge
+  P1IFG |= ~0x10;                           // P1.4 IFG cleared
 
   //BIT3 on Port 1 can be used as Switch2
-
-	  P1DIR |= BIT0;
-	  P1SEL |= BIT0;
-
+  */
 }
 
 void LEDSetup(){
