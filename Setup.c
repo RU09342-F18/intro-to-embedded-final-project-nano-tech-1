@@ -78,5 +78,22 @@ void LEDSetup(){
 
 }
 
+void MQTTSetup(){
+		/*
+	  Commands:
+  $Subscribe        SYNTAX: "$Topic\n"
+  #Publish          SYNTAX: "#Topic Payload\n"
+  !ReceivedMessage  SYNTAX: "!Topic: Message\n"
+  ~Unsubscribe      SYNTAX: "~Topic\n"
+  */
+  unsigned int count = 0;
+  char Subscribe[10]={'$','S','e','c','u','r','i','t','y','\0'};
+  while (!(IFG2&UCA0TXIFG) && count <= 8){	                // USCI_A0 TX buffer ready?
+	UCA0TXBUF = Subscribe[count];
+	count++;
+  }
+  count = 0;
+}
+
 
 

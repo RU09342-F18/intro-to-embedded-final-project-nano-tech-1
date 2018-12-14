@@ -16,5 +16,6 @@ void BoardSetup();
 
 void LEDSetup();
 
+void MQTTSetup();
 
 #endif /* Setup_H_ */

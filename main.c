@@ -1,24 +1,29 @@
 //Includes
 #include <msp430.h>
 #include <Setup.h>
+//Definition
+typedef int bool;
+#define true 1
+#define false 0
+#define RED BIT6              // P1.6
 //Functions
 void MotionSensor();
 void SoundSensor();
-
-#define RED BIT6              // P1.6
+//Global Variables
+bool BuzzerOn = false;
 
 volatile unsigned int i = 0;                //This will not be optimized and removed by the compiler
 
 int main(void){              	
-
-
-  BoardSetup();                             // Setup the board
-
-  UARTSetup();                              // Setup UART
-
-  LEDSetup();                               // Setup for LEDs
-
-  TimerSetup();                             // Setup Timers
+//Setup the board
+	BoardSetup();                             // Setup the board
+	UARTSetup();                              // Setup UART
+	LEDSetup();                               // Setup for LEDs
+	TimerSetup();                             // Setup Timers
+//Setup MQTT
+MQTTSetup();
+  
+//Prepare for normal operation
 
   __bis_SR_register(GIE);       // Enter LPM4 w/interrupt
   
