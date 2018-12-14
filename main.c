@@ -5,12 +5,12 @@
 typedef int bool;
 #define true 1
 #define false 0
-
 #define RED BIT6              // P1.6
 //Functions
 void MotionSensor();
 void SoundSensor();
-
+//Global Variables
+bool BuzzerOn = false;
 
 
 int main(void){              	
