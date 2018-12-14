@@ -20,7 +20,8 @@ int main(void){
 	LEDSetup();                               // Setup for LEDs
 	TimerSetup();                             // Setup Timers
 //Setup MQTT
-	
+MQTTSetup();
+  
 //Prepare for normal operation
 
   __bis_SR_register(GIE);       // Enter LPM4 w/interrupt
