@@ -1,14 +1,18 @@
 //Includes
 #include <msp430.h>
 #include <Setup.h>
+
 //Definition
 typedef int bool;
 #define true 1
 #define false 0
 #define RED BIT6              // P1.6
+
 //Functions
 void MotionSensor();
 void SoundSensor();
+void ADC_Setup();
+
 //Global Variables
 bool BuzzerOn = false;
 
@@ -17,6 +21,7 @@ volatile unsigned int i = 0;                //This will not be optimized and rem
 int main(void){              	
 //Setup the board
 	BoardSetup();                             // Setup the board
+  ADC_Setup();                              // Setup for ADC
 	UARTSetup();                              // Setup UART
 	LEDSetup();                               // Setup for LEDs
 	TimerSetup();                             // Setup Timers
@@ -62,33 +67,9 @@ void __attribute__ ((interrupt(PORT1_VECTOR))) Port_1 (void)
 #error Compiler not supported!
 #endif
 {
-  /*if (P1IFG == BIT3){
-    P1OUT ^= BIT0;                            // P1.0 = toggle
-    P1IFG &= ~BIT3;                           // P1.3 IFG cleared
-  }
-  if (P1IFG == BIT4){
-    P2OUT ^= BIT0;                            // P2.0 = toggle
-    P1IFG &= ~BIT4;                           // P1.4 IFG cleared
-  }
-  */
-  
-  
-  //while(1){                             //Infinite while loop
-  //i++;
-  switch(P1IFG){
-    case 0x08:
-      P1OUT ^= BIT0;                            // P1.0 = toggle
-      P1IFG &= ~BIT3;                           // P1.3 IFG cleared
-      break;
-    case 0x10:
-      P2OUT ^= BIT0;                            // P2.0 = toggle
-      P1IFG &= ~BIT4;                           // P1.4 IFG cleared
-      break;
-    default:
-      //this should never run
-      break;
-  }
-
+  P2OUT ^= BIT0;                            // P2.0 = toggle
+  P1IFG &= ~BIT4;                           // P1.4 IFG cleared
 }//end interrupt vector
+
 
 
