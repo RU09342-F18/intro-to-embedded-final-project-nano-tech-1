@@ -14,15 +14,14 @@ bool BuzzerOn = false;
 
 
 int main(void){              	
-
-
-  BoardSetup();                             // Setup the board
-
-  UARTSetup();                              // Setup UART
-
-  LEDSetup();                               // Setup for LEDs
-
-  TimerSetup();                             // Setup Timers
+//Setup the board
+	BoardSetup();                             // Setup the board
+	UARTSetup();                              // Setup UART
+	LEDSetup();                               // Setup for LEDs
+	TimerSetup();                             // Setup Timers
+//Setup MQTT
+	
+//Prepare for normal operation
 
   __bis_SR_register(GIE);       // Enter LPM4 w/interrupt
   
