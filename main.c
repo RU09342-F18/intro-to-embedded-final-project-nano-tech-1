@@ -20,7 +20,7 @@ int main(void){
 	LEDSetup();                               // Setup for LEDs
 	TimerSetup();                             // Setup Timers
 //Setup MQTT
-MQTTSetup();
+	MQTTSetup();
   
 //Prepare for normal operation
 
