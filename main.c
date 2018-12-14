@@ -12,6 +12,7 @@ void SoundSensor();
 //Global Variables
 bool BuzzerOn = false;
 
+volatile unsigned int i = 0;                //This will not be optimized and removed by the compiler
 
 int main(void){              	
 //Setup the board
@@ -61,33 +62,33 @@ void __attribute__ ((interrupt(PORT1_VECTOR))) Port_1 (void)
 #error Compiler not supported!
 #endif
 {
-  P1OUT ^= BIT0;                            // P1.0 = toggle
-  P1IFG &= ~BIT3;                           // P1.3 IFG cleared
-
-  P2OUT ^= BIT0;                            // P2.0 = toggle
-  P1IFG &= ~BIT4;                           // P1.4 IFG cleared
-}//end interrupt vector
-
-  /*
+  /*if (P1IFG == BIT3){
+    P1OUT ^= BIT0;                            // P1.0 = toggle
+    P1IFG &= ~BIT3;                           // P1.3 IFG cleared
+  }
+  if (P1IFG == BIT4){
+    P2OUT ^= BIT0;                            // P2.0 = toggle
+    P1IFG &= ~BIT4;                           // P1.4 IFG cleared
+  }
+  */
+  
+  
+  //while(1){                             //Infinite while loop
+  //i++;
   switch(P1IFG){
-    case 0x01:
-      break;
-    case 0x02:
-      break;
-    case 0x04:                  //P1.3
+    case 0x08:
       P1OUT ^= BIT0;                            // P1.0 = toggle
       P1IFG &= ~BIT3;                           // P1.3 IFG cleared
       break;
-      P1OUT ^= BIT1;
-      P1IFG &= ~BIT1;
-    case 0x08:
+    case 0x10:
+      P2OUT ^= BIT0;                            // P2.0 = toggle
+      P1IFG &= ~BIT4;                           // P1.4 IFG cleared
       break;
-  }*/
+    default:
+      //this should never run
+      break;
+  }
 
-  // This interrupt should fire when the morion sensor sees something
-  // When the motion sensor sees something the buzzer should go off and the LED should blink
-
-
-
+}//end interrupt vector
 
 

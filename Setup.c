@@ -44,14 +44,14 @@ void BoardSetup(){
   P1IE |=  BIT3;                            // P1.3 interrupt enabled
   P1IES |= BIT3;                            // P1.3 Hi/lo edge
   P1REN |= BIT3;							              // Enable Pull Up
-  P1IFG &= ~BIT3;                           // P1.3 IFG cleared
+  //P1IFG &= ~BIT3;                           // P1.3 IFG cleared
 
   // RED LED toggles each time interrupt is fired
   P2DIR |= BIT0;                            // Set P2.0 to output direction
   P1IE |=  BIT4;                            // P1.4 interrupt enabled
   P1IES |= BIT4;                            // P1.4 Hi/lo edge
   P1REN |= BIT4;							              // Enable Pull Up
-  P1IFG &= ~BIT4;                           // P1.4 IFG cleared
+  //P1IFG &= ~BIT4;                           // P1.4 IFG cleared
 
    
 
