@@ -29,9 +29,9 @@ void TimerSetup()                       		  // Subject to change
   TA0CCR2 = 5;
 
   //Sound poller
-  TB0CTL |= TBSSEL_2 + MC_1 ;           // Select clock source to SMCLK and to up mode
+  TA1CTL |= TASSEL_2 + MC_1 ;           // Select clock source to SMCLK and to up mode
   //TA0CCR0 = 60000;
-  TB0CCR1 = 10000;                              //100ms
+  TA1CCR1 = 10000;                              //100ms
 
 
 
