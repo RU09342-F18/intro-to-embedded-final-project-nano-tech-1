@@ -39,14 +39,6 @@ void BoardSetup(){
   P1SEL |= BIT0;
   */
 
-  //Setting up ADC
-  ADC10CTL1 = CONSEQ_2 + INCH_3;            // Repeat single channel
-  ADC10CTL0 = MSC + ADC10ON;
-  ADC10DTC1 = 0x20;                         // 32 conversions
-  ADC10AE0 |= BIT3;                         // P1.3 ADC option select
-  P1DIR |= BIT0;                            // Set P1.0 output
-
-
   // GREEN LED toggles each time interrupt is fired
   /*P1DIR |= BIT0;                            // Set P1.0 to output direction
   P1IE |=  BIT3;                            // P1.3 interrupt enabled
@@ -65,22 +57,26 @@ void BoardSetup(){
 }
 
 void LEDSetup(){
-
   //Blinking LED - P1.6 - Can not be changed
   P1DIR |= RED;
   P1SEL |= RED;
-
 }
 
 void ADC_Setup(){
-  for (;;){
+  //Setting up ADC
+  ADC10CTL1 = CONSEQ_2 + INCH_3;            // Repeat single channel
+  ADC10CTL0 = MSC + ADC10ON;
+  ADC10DTC1 = 0x20;                         // 32 conversions
+  ADC10AE0 |= BIT3;                         // P1.3 ADC option select
+  P1DIR |= BIT5;                            // Set P1.0 output
+
+  //for (;;){
     ADC10CTL0 &= ~ENC;
     while (ADC10CTL1 & ADC10BUSY);          // Wait if ADC10 core is active
     ADC10SA = 0x200;                        // Data buffer start
-    P1OUT |= BIT0;                          // Set P1.0 LED on
     ADC10CTL0 |= ENC + ADC10SC;             // Sampling and conversion start
-    P1OUT &= ~BIT0;                         // Clear P1.0 LED off
-  }
+    P1OUT ^= BIT5;                         // Clear P1.0 LED off
+  //}
 }
 
 void MQTTSetup(){

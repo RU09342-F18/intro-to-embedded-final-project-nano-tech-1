@@ -21,10 +21,10 @@ volatile unsigned int i = 0;                //This will not be optimized and rem
 int main(void){              	
 //Setup the board
 	BoardSetup();                             // Setup the board
-  ADC_Setup();                              // Setup for ADC
 	UARTSetup();                              // Setup UART
 	LEDSetup();                               // Setup for LEDs
 	TimerSetup();                             // Setup Timers
+  ADC_Setup();                              // Setup for ADC
 //Setup MQTT
 	MQTTSetup();
   
