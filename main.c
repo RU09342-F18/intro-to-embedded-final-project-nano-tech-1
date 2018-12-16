@@ -48,11 +48,10 @@ void SoundSensor(){
 
 
 
-#pragma vector=TIMER1_B1_VECTOR
-__interrupt void Timer_B1 (void){
-    //This is used to make the buzzer make noise
-    P1OUT ^= BIT0;                            // P1.0 = toggle
-    TA1CCR1 =TA1CCR1 + 10000;
+#pragma vector=TIMER1_A1_VECTOR
+__interrupt void Timer1_A1 (void){ //This timer interrupt is to poll the mic.It currently does not work correctly
+        P1OUT ^= BIT0;                            // P1.0 = toggle
+    TA1CCR1 = TA1CCR1 + 10000;
 }
 
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
