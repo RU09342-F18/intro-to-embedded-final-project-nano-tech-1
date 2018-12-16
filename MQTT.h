@@ -8,9 +8,9 @@
 #ifndef MQTT_H_
 #define MQTT_H_
 
-char PublishBuzzer(unsigned char value);
-char PublishMotion(unsigned char value);
-char PublishSound(unsigned char value);
+void PublishBuzzer(unsigned char value);
+void PublishMotion(unsigned char value);
+void PublishSound(unsigned char value);
 void ReceivedMessage();
 void Unsubscribe(char topic);
 
