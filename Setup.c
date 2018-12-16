@@ -39,14 +39,6 @@ void BoardSetup(){
   P1SEL |= BIT0;
   */
 
-  // GREEN LED toggles each time interrupt is fired
-  /*P1DIR |= BIT0;                            // Set P1.0 to output direction
-  P1IE |=  BIT3;                            // P1.3 interrupt enabled
-  P1IES |= BIT3;                            // P1.3 Hi/lo edge
-  P1REN |= BIT3;							              // Enable Pull Up
-  //P1IFG &= ~BIT3;                           // P1.3 IFG cleared
-  */
-
   // RED LED toggles each time interrupt is fired
   P2DIR |= BIT0;                            // Set P2.0 to output direction
   P1IE |=  BIT4;                            // P1.4 interrupt enabled
@@ -54,6 +46,14 @@ void BoardSetup(){
   P1REN |= BIT4;                            // Enable Pull Up
   //P1IFG &= ~BIT4;                           // P1.4 IFG cleared
 
+  /*
+  // GREEN LED toggles each time interrupt is fired
+  P1DIR |= BIT5;                            // Set P1.0 to output direction
+  P1IE |=  BIT3;                            // P1.3 interrupt enabled
+  P1IES |= BIT3;                            // P1.3 Hi/lo edge
+  //P1REN |= BIT3;							              // Enable Pull Up
+  //P1IFG &= ~BIT3;                           // P1.3 IFG cleared
+  */
 }
 
 void LEDSetup(){
@@ -74,8 +74,9 @@ void ADC_Setup(){
     ADC10CTL0 &= ~ENC;
     while (ADC10CTL1 & ADC10BUSY);          // Wait if ADC10 core is active
     ADC10SA = 0x200;                        // Data buffer start
+    P1OUT |= BIT5;                          // Set P1.0 LED on
     ADC10CTL0 |= ENC + ADC10SC;             // Sampling and conversion start
-    P1OUT ^= BIT5;                         // Clear P1.0 LED off
+    P1OUT &= ~BIT5;                         // Clear P1.0 LED off
   //}
 }
 

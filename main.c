@@ -69,6 +69,15 @@ void __attribute__ ((interrupt(PORT1_VECTOR))) Port_1 (void)
 {
   P2OUT ^= BIT0;                            // P2.0 = toggle
   P1IFG &= ~BIT4;                           // P1.4 IFG cleared
+  
+  /*if (P1IFG == BIT4){
+    P2OUT ^= BIT0;                            // P2.0 = toggle
+    P1IFG &= ~BIT4;                           // P1.4 IFG cleared
+  }
+  else if (P1IFG == BIT3){
+    P1OUT ^= BIT5;                            // P2.0 = toggle
+    P1IFG &= ~BIT3;                           // P1.4 IFG cleared
+  }*/
 }//end interrupt vector
 
 
