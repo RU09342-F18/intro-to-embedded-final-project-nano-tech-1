@@ -6,7 +6,7 @@
  */
 
 #include "MQTT.h"
-
+#include <msp430.h>
 /*
 	  Commands:
   $Subscribe        SYNTAX: "$Topic\n"
@@ -15,8 +15,8 @@
   ~Unsubscribe      SYNTAX: "~Topic\n"
   */
   
-	char PublishBuzzer(unsigned char value){
-		char Buzzer [12] = {'#','S','e','c','u','r','i','t','y','B','x','\n'}
+	void PublishBuzzer(unsigned char value){
+		char Buzzer [12] = {'#','S','e','c','u','r','i','t','y','B','x','\n'};
 		int count = 0;
 		Buzzer [10] = value;
 		while (!(IFG2&UCA0TXIFG) && count <= 11){	                // USCI_A0 TX buffer ready?
@@ -26,8 +26,8 @@
   }
 
 	
-	char PublishMotion(unsigned char value){
-		char Motion [11] = {'#','S','e','c','u','r','i','t','y','M','x','\n'}
+	void PublishMotion(unsigned char value){
+		char Motion [11] = {'#','S','e','c','u','r','i','t','y','M','x','\n'};
 		int count = 0;
 		Motion [10] = value;
 		while (!(IFG2&UCA0TXIFG) && count <= 11){	                // USCI_A0 TX buffer ready?
@@ -36,8 +36,8 @@
 		}
 	}
 	
-	char PublishSound(unsigned char value){
-		char Sound [11] = {'#','S','e','c','u','r','i','t','y','S','x','\n'}
+	void PublishSound(unsigned char value){
+		char Sound [11] = {'#','S','e','c','u','r','i','t','y','S','x','\n'};
 		int count = 0;
 		Sound [10] = value;
 		while (!(IFG2&UCA0TXIFG) && count <= 11){	                // USCI_A0 TX buffer ready?
@@ -50,6 +50,6 @@
 		
 	}
 	
-	void Unsubscribe(){
+	void Unsubscribe(char topic){
 		
 	}
