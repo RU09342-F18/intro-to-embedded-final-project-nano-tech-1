@@ -71,13 +71,13 @@ void ADC_Setup(){
   P1DIR |= BIT5;                                        // Set P1.5 output
 
   ADC10CTL0 &= ~ENC;
-  /*
+
   while (ADC10CTL1 & ADC10BUSY);                        // Wait if ADC10 core is active
   ADC10SA = 0x200;                                      // Data buffer start
-  P1OUT |= BIT5;                                            // Set P1.0 LED on
+  //P1OUT |= BIT5;                                            // Set P1.0 LED on
   ADC10CTL0 |= ENC + ADC10SC;                           // Sampling and conversion start
-  P1OUT &= ~BIT5;                                       // Clear P1.0 LED off
-  */
+  //P1OUT &= ~BIT5;                                       // Clear P1.0 LED off
+
 }// End ADC Setup
 
 void MQTTSetup(){

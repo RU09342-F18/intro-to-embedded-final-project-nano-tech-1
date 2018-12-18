@@ -40,6 +40,7 @@ int main(void){
 }
 
 void Polling(){                         // Polls the sound sensor to check for noise
+
   if (ADC10MEM >= 500 && BuzzerOn == false){
     AllowBuzzer = true;
     SoundSensor();
@@ -55,7 +56,7 @@ void MotionSensor(){
 
 void SoundSensor(){
 	//We have detected sound
-    BuzzerOn = true
+    BuzzerOn = true;
 }
 
 //--------------------Interrupts--------------------
@@ -95,15 +96,10 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
   switch( TA1IV )
   {
   case  2:                                  // CCR1 Used to poll sound every 1000ms
-      if(BuzzerOn){
-          BuzzerOn = false;
-          //Turn off the buzzer (Some how)
-          AllowBuzzer = false;
-      }eslse{
       P1OUT ^= BIT0;                            // P1.0 = toggle test code
       TA1CCR1 = TA1CCR1 + 10000;                //Off set timer for next 100 ms
       Polling();                                //Check the ADC
-      }
+
            break;
   case  4:
       TA0CCR2 += 40;
