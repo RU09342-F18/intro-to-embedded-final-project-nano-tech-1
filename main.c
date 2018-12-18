@@ -116,7 +116,7 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
 
 
 
-//Interrupt for Motion Sensor, LED will toggle when it recieves a signal from the Motion Sensor
+//Interrupt for Motion Sensor, LED will toggle when it receives a signal from the Motion Sensor
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
 #pragma vector=PORT1_VECTOR
 __interrupt void Port_1(void)
