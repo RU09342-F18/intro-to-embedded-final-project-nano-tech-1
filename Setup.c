@@ -40,10 +40,9 @@ void TimerSetup()                       		  // Subject to change
 void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
 
-  //Buzzer - P1.0 - Can be changed
-	//From example
-	P2DIR |= BIT7;                         	    // Set P1.0 to output direction
-  P2SEL |= BIT7;
+  //Buzzer - P2.5
+	P2DIR |= BIT5;                         	    // Set P1.0 to output direction
+    P2SEL |= BIT5;
 
 
   // RED LED toggles each time interrupt is fired
