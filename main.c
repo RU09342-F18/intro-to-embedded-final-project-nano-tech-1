@@ -68,17 +68,20 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
 #error Compiler not supported!
 #endif
 {
- switch( TA0IV )
- {
-   case  2: break;                          // CCR1
-   case  4:                                 //CCR2
-       TA0CCR2 += 5;
-       P2OUT ^= BIT5;
-       break;
-   case 10:                                 // overflow
-            break;
+  switch( TA0IV )
+  {
+  case  2:                                  // CCR1
+
+           break;
+  case  4:
+      TA0CCR2 += 40;
+      P2OUT ^= BIT5;
+      break;                           // CCR2 not used
+  case 10: break;                           // overflow not used
  }
 }
+
+
 /*
 #pragma vector=TIMER1_A1_VECTOR
 __interrupt void Timer1_A1 (void){ //This timer interrupt is to poll the mic.It currently does not work correctly

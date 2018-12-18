@@ -22,17 +22,20 @@ void TimerSetup()                       		  // Subject to change
 {
   //RED LED and Buzzer
   TA0CTL |= TASSEL_2 + MC_1 + ID_3;           // Select clock source to SMCLK and to up mode
-  TA0CCTL1 |= OUTMOD_7;
-  TA0CCR0 = 60000;
+  TA0CCTL2 |= OUTMOD_7;
+ TA0CCTL2 |= CCIE;
+  TA0CCR0 = 65535;
   TA0CCR1 = 9000;
   //Buzzer
-  TA0CCR2 = 5;
+  TA0CCR2 = 40;
 
   //Sound poller
  // TA1CCTL1 = CCIE;
   TA1CTL = TASSEL_2 + MC_1 + ID_3 /*+ TAIE */+ TACLR; // SMCLK/4, Up
   TA1CCR0 = 65535;
   TA1CCR1 = 10000;
+  //TA1CCTL2 |= OUTMOD_7;
+  //TA1CCR2 = 40;
 
 
 }
@@ -41,7 +44,7 @@ void BoardSetup(){
   WDTCTL = WDTPW + WDTHOLD;                   // Stop watchdog timer
 
   //Buzzer - P2.5
-	P2DIR |= BIT5;                         	    // Set P1.0 to output direction
+	P2DIR |= BIT5;                         	    // Set P2.5 to output direction
     P2SEL |= BIT5;
 
 
