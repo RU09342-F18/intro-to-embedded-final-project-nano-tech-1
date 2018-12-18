@@ -32,6 +32,7 @@ void TimerSetup(){
   //Sound poller
  // TA1CCTL1 = CCIE;
   TA1CTL = TASSEL_2 + MC_1 + ID_3 /*+ TAIE */+ TACLR;   // Select SMCLK, Up mode, input clock divided by 8, and Timer A Clear
+  TA1CCTL1 |= CCIE;
   TA1CCR0 = 65535;
   TA1CCR1 = 10000;
 
@@ -56,6 +57,9 @@ void LEDSetup(){
   // Blinking LED - P1.6 - Can not be changed
   P1DIR |= RED;
   P1SEL |= RED;
+
+  P1DIR |= BIT0;
+  P1SEL |= BIT0;
 }// End LEDSetup
 
 void ADC_Setup(){
@@ -67,11 +71,13 @@ void ADC_Setup(){
   P1DIR |= BIT5;                                        // Set P1.5 output
 
   ADC10CTL0 &= ~ENC;
+  /*
   while (ADC10CTL1 & ADC10BUSY);                        // Wait if ADC10 core is active
   ADC10SA = 0x200;                                      // Data buffer start
-  P1OUT |= BIT5;                                        // Set P1.0 LED on
+  P1OUT |= BIT5;                                            // Set P1.0 LED on
   ADC10CTL0 |= ENC + ADC10SC;                           // Sampling and conversion start
   P1OUT &= ~BIT5;                                       // Clear P1.0 LED off
+  */
 }// End ADC Setup
 
 void MQTTSetup(){
