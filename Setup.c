@@ -29,8 +29,8 @@ void TimerSetup()                       		  // Subject to change
   TA0CCR2 = 5;
 
   //Sound poller
-  TA1CCTL1 = CCIE;
-  TA1CTL = TASSEL_2 + MC_1 + ID_3 + TAIE + TACLR; // SMCLK/4, Up
+ // TA1CCTL1 = CCIE;
+  TA1CTL = TASSEL_2 + MC_1 + ID_3 /*+ TAIE */+ TACLR; // SMCLK/4, Up
   TA1CCR0 = 65535;
   TA1CCR1 = 10000;
 
@@ -42,9 +42,9 @@ void BoardSetup(){
 
   //Buzzer - P1.0 - Can be changed
 	//From example
-	/*P1DIR |= BIT0;                         	    // Set P1.0 to output direction
-  P1SEL |= BIT0;
-  */
+	P2DIR |= BIT7;                         	    // Set P1.0 to output direction
+  P2SEL |= BIT7;
+
 
   // RED LED toggles each time interrupt is fired
   P2DIR |= BIT0;                            // Set P2.0 to output direction
