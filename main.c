@@ -65,17 +65,25 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
 #error Compiler not supported!
 #endif
 {
-  switch(TA0IV){
-    case  2:
-      break;                                // CCR1
-    case  4:                                // CCR2
-      TA0CCR2 += 5;
-      break;
-    case 10:
-      P1OUT ^= 0x01;                        // Overflow
-      break;
-  }
+ switch( TA0IV )
+ {
+   case  2: break;                          // CCR1
+   case  4:                                 // CCR2
+       TA0CCR2 += 5;
+       P2OUT ^= BIT5;
+       break;
+   case 10:                                 // overflow
+            break;
+ }
 }
+/*
+#pragma vector=TIMER1_A1_VECTOR
+__interrupt void Timer1_A1 (void){ //This timer interrupt is to poll the mic.It currently does not work correctly
+        P1OUT ^= BIT0;                            // P1.0 = toggle
+    TA1CCR1 = TA1CCR1 + 10000;
+    Polling();
+}
+*/
 
 //Interrupt for Motion Sensor, LED will toggle when it recieves a signal from the Motion Sensor
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
