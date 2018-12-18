@@ -73,12 +73,12 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
    case  2: break;                          // CCR1
    case  4:                                 //CCR2
        TA0CCR2 += 5;
-
+       P2OUT ^= BIT5;
        break;
-   case 10: P1OUT ^= 0x01;                  // overflow
+   case 10:                                 // overflow
             break;
  }
-
+}
 /*
 #pragma vector=TIMER1_A1_VECTOR
 __interrupt void Timer1_A1 (void){ //This timer interrupt is to poll the mic.It currently does not work correctly
