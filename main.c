@@ -16,6 +16,7 @@ void Polling();
 
 // Global Variables
 bool BuzzerOn = false;
+bool AllowBuzzer = false;
 
 volatile unsigned int i = 0;            // This will not be optimized and removed by the compiler
 
@@ -40,8 +41,10 @@ int main(void){
 
 void Polling(){                         // Polls the sound sensor to check for noise
   if (ADC10MEM >= 500 && BuzzerOn == false){
+    AllowBuzzer = true;
     SoundSensor();
   }else{
+
     BuzzerOn = false;
   }// End else statement
 }// End Polling Function
@@ -70,10 +73,12 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
   case  2:                                  // CCR1
 
            break;
-  case  4:
+  case  4:                                 //CCR2 Buzzer control
+      if(AllowBuzzer == true){
       TA0CCR2 += 40;
       P2OUT ^= BIT5;
-      break;                           // CCR2 not used
+      }
+      break;
   case 10: break;                           // overflow not used
 
  }
@@ -92,6 +97,8 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
   case  2:                                  // CCR1 Used to poll sound every 1000ms
       if(BuzzerOn){
           BuzzerOn = false;
+          //Turn off the buzzer (Some how)
+          AllowBuzzer = false;
       }eslse{
       P1OUT ^= BIT0;                            // P1.0 = toggle test code
       TA1CCR1 = TA1CCR1 + 10000;                //Off set timer for next 100 ms
