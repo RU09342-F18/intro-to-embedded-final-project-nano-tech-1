@@ -31,10 +31,11 @@ void TimerSetup(){
 
   //Sound poller
  // TA1CCTL1 = CCIE;
-  TA1CTL = TASSEL_2 + MC_1 + ID_3 /*+ TAIE */+ TACLR;   // Select SMCLK, Up mode, input clock divided by 8, and Timer A Clear
+  TA1CTL = TASSEL_1 + MC_1 + ID_3 /*+ TAIE */+ TACLR;   // Select ACLK, Up mode, input clock divided by 8, and Timer A Clear
   TA1CCTL1 |= CCIE;
   TA1CCR0 = 65535;
-  TA1CCR1 = 10000;
+  TA1CCR1 = 2000;
+  TA1CCR2 = 65534;
 
 }// End TimerSetup
 
