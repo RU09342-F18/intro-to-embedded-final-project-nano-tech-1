@@ -16,7 +16,7 @@ void Polling();
 
 // Global Variables
 bool BuzzerOn = false;
-bool AllowBuzzer = false;
+bool AllowBuzzer = true;
 
 volatile unsigned int i = 0;            // This will not be optimized and removed by the compiler
 
@@ -86,7 +86,7 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
       }
       break;
   case 10:
-      P2SEL &= ~BIT5;
+
       break;                           // overflow not used
 
  }
@@ -109,6 +109,9 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
 
            break;
   case  4:
+      P2SEL &= ~BIT5;
+      AllowBuzzer = true;
+
       break;                           // CCR2 not used
   case 10: break;                           // overflow not used
 
