@@ -75,7 +75,7 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
   case  2:                                  // CCR1
 
            break;
-  case      :                                 //CCR2 Buzzer control
+  case 4:                                 //CCR2 Buzzer control
       if(AllowBuzzer == true){
       TA0CCR2 += 40;
       P2OUT ^= BIT5;
