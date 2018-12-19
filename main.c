@@ -130,9 +130,13 @@ void __attribute__ ((interrupt(PORT1_VECTOR))) Port_1 (void)
 #error Compiler not supported!
 #endif
 {
+    if(AllowBuzzer == true){
+       MotionSensor() ;
+    }
   P2OUT ^= BIT0;                            // P2.0 = toggle
   P1IFG &= ~BIT4;                           // P1.4 IFG cleared
 }//End interrupt vector
 
 
 
+6v
