@@ -25,7 +25,7 @@ void TimerSetup(){
   TA0CTL |= TASSEL_2 + MC_1 + ID_3;                     // Select SMCLK, Up mode, and input clock divided by 8
   TA0CCTL1 |= OUTMOD_7;                                 // Reset or Set Mode
   TA0CCTL2 |=  CCIE;
-  TA0CCR0 = 60000;
+  TA0CCR0 = 65535;
   TA0CCR1 = 9000;
   TA0CCR2 = 40;
 
