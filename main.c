@@ -45,7 +45,7 @@ void Polling(){                         // Polls the sound sensor to check for n
     AllowBuzzer = true;
     SoundSensor();
   }else{
-
+      P1SEL &= ~BIT0;
     BuzzerOn = false;
   }// End else statement
 }// End Polling Function
@@ -57,6 +57,7 @@ void MotionSensor(){
 void SoundSensor(){
 	//We have detected sound
     BuzzerOn = true;
+    P1SEL |= BIT0;
 }
 
 //--------------------Interrupts--------------------
@@ -74,7 +75,7 @@ void __attribute__ ((interrupt(TIMER0_A1_VECTOR))) Timer_A (void)
   case  2:                                  // CCR1
 
            break;
-  case  4:                                 //CCR2 Buzzer control
+  case      :                                 //CCR2 Buzzer control
       if(AllowBuzzer == true){
       TA0CCR2 += 40;
       P2OUT ^= BIT5;
