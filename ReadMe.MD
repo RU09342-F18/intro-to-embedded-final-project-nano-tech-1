@@ -33,7 +33,14 @@ void SoundSensor();
 void Polling();
 ~~~~
 
-The UARTSetup() function is the setup for the serial UART communication that sends data to the ESP8266 chip, which sends the alert to the user's phone. 'TimerSetup()' is setting up two timers: one for the flashing of the red LED on the MSP430 and the frequency of the buzzer, and one is used to poll the sound every 1000ms. 'BoardSetup()' is setting up the inputs and outputs of the different pins that will be used. 'LEDSetup()' is pretty much self explanatory as it is setting up the outputs for the LEDs. 'ADC_Setup()' is set up for continuous conversion of the analog inputs from the sound sensor. 'MQTTSetup()' is setting up the wireless communication to send alerts to the user when the device detects auditory and visual cues. The 'SoundSensor()' function turns the buzzer alarm on when sound is detected from the sensor. The 'Polling()' function is for polling the sound sensor to check for noise. 
+- The 'UARTSetup()' function is the setup for the serial UART communication that sends data to the ESP8266 chip, which sends the alert to the user's phone. 
+- 'TimerSetup()' is setting up two timers: one for the flashing of the red LED on the MSP430 and the frequency of the buzzer, and one is used to poll the sound every 1000ms. 
+- 'BoardSetup()' is setting up the inputs and outputs of the different pins that will be used. 
+- 'LEDSetup()' is pretty much self explanatory as it is setting up the outputs for the LEDs. 
+- 'ADC_Setup()' is set up for continuous conversion of the analog inputs from the sound sensor. 
+- 'MQTTSetup()' is setting up the wireless communication to send alerts to the user when the device detects auditory and visual cues. 
+- The 'SoundSensor()' function turns the buzzer alarm on when sound is detected from the sensor. 
+- The 'Polling()' function is for polling the sound sensor to check for noise. 
 
 One interrupt vector is used for the motion sensor for when the sensor detects motion and sends signal to toggle the LED. In the event of when both or either the motion sensor and the sound sensor detects changes, the buzzer alarm will set on, the flashing of the red LED will be enable, and a message will be sent through the ESP to the user. 
 
@@ -45,10 +52,18 @@ The ESP8266 file is an arduino file authored by Russell Trafford, which is compl
 The MSP430 micro-controller is crucial as it is the main processing unit for the Security System. It uses the high signals received from the PIR motion sensor and the analog signal from the Microphone Sound sensor to set off the buzzer and the LED in real time.
 
 ### Passive Infrared (PIR) Motion Sensor
-
+The infrared sensor measures the infrared levels within its field of vision. This data is stored on the internal memory and is compared to the next reading in order to detect change. The on-board processor is used to detect this change, so no additional hardware or software is needed to make this work. If change is detected, the motion sensor outputs a high value. If no change is detected the sensor outputs low. The specifics are as follow:
+- Power source pin is connected to the MSP 3.3V pin
+- GND pin is connected to the MSP GND pin
+- The OUTPUT pin is connected to P1.4 on MSP
+- Can detect motion from within 7 meter range
 
 ### KY-037 Microphone Sensor Module (High Sensitivity)
-
+The short range microphone is used to how loud a noise is in a room. The microphone has two output modes. Digital,outputs high when noise passes a defined threshold, and analog, which outputs a voltage proportional to the noise in the room. The specifics are as follow:
+- Power source pin is connected to the MSP 3.3V pin
+- GND pin is connected to the MSP GND pin
+- Analog Output is connected to P1.3 on MSP
+- Digital Output is used for testing
 
 ### Electromagnetic Active Buzzer PB-1226PEAQ
 In the event of motion and or sound detected around the Security System device, the MSP430 will send a PWM signal to the buzzer to create a frequency of an alarm. The power source pin of the buzzer is connected to the P2.5 pin on the MSP in order to control the frequency and the GND pin is connected to the GND pin on the MSP as well.
