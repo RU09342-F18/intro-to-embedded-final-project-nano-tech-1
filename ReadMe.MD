@@ -34,7 +34,7 @@ void Polling();
 ~~~~
 
 - The 'UARTSetup()' function is the setup for the serial UART communication that sends data to the ESP8266 chip, which sends the alert to the user's phone. 
-- 'TimerSetup()' is setting up two timers: one for the flashing of the red LED on the MSP430 and the frequency of the buzzer, and one is used to poll the sound every 1000ms. 
+- 'TimerSetup()' is setting up two timers: one for the flashing of the red LED on the MSP430 and the frequency of the buzzer, and one is used to poll the sound every 100ms. 
 - 'BoardSetup()' is setting up the inputs and outputs of the different pins that will be used. 
 - 'LEDSetup()' is pretty much self explanatory as it is setting up the outputs for the LEDs. 
 - 'ADC_Setup()' is set up for continuous conversion of the analog inputs from the sound sensor. 
